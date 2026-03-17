@@ -181,7 +181,7 @@ export default function HeroSection() {
                 href="/download"
                 className="px-6 py-3 bg-white text-teal-600 rounded-lg border-2 border-teal-600 font-semibold hover:bg-teal-50 transition-colors"
               >
-                Register as Driver
+               Register as Freight Vehicle Driver/Owner
               </Link>
             </motion.div>
 

@@ -217,7 +217,7 @@ export default function DownloadPage() {
               href="#"
               className="px-6 py-3 bg-white text-blue-600 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors font-medium"
             >
-              Register as Driver
+              Register as Freight Vehicle Driver/Owner
             </Link>
           </div>
         </motion.div>
