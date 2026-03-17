@@ -63,7 +63,7 @@ export default function CookiesPolicyPage() {
           <p className="text-teal-100 max-w-2xl mx-auto text-sm">
             How we use cookies on Ethiochinet
           </p>
-          <p className="text-teal-200 text-xs mt-2">Last updated: March 2024</p>
+          <p className="text-teal-200 text-xs mt-2">Last updated: March 2026</p>
         </div>
       </div>
 

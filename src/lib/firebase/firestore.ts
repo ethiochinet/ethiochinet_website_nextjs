@@ -161,6 +161,7 @@ export const submitInvestmentInterest = async (data: any) => {
   }
 };
 
+//  the submitJobApplication function
 export const submitJobApplication = async (data: any) => {
   try {
     const docRef = await addDoc(collection(db, 'jobApplications'), {

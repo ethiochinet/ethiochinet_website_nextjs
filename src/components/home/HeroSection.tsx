@@ -239,7 +239,7 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05 }}
               >
                 <div className="bg-teal-600 h-14 flex items-center justify-center">
-                  <span className="text-white font-semibold text-sm">Ethiochinet</span>
+                  <span className="text-white font-semibold text-sm">Ethiochinet Freight Owner</span>
                 </div>
                 <div className="p-4 space-y-3">
                   <div className="h-16 bg-gray-200 rounded-lg animate-pulse"></div>
@@ -265,8 +265,8 @@ export default function HeroSection() {
                 className="absolute right-0 bottom-10 w-64 bg-white rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-800 z-10"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="bg-blue-600 h-14 flex items-center justify-center">
-                  <span className="text-white font-semibold text-sm">Driver App</span>
+                <div className="bg-teal-600 h-14 flex items-center justify-center">
+                  <span className="text-white font-semibold text-sm">Ethiochinet Driver</span>
                 </div>
                 <div className="p-4 space-y-3">
                   <div className="h-16 bg-gray-200 rounded-lg animate-pulse"></div>
@@ -274,8 +274,8 @@ export default function HeroSection() {
                   <div className="h-16 bg-gray-200 rounded-lg animate-pulse"></div>
                   <div className="h-8 bg-blue-100 rounded-lg"></div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-blue-600 text-white text-xs text-center py-2">
-                  Driver App
+                <div className="absolute bottom-0 left-0 right-0 bg-teal-600 text-white text-xs text-center py-2">
+                  Ethiochinet Driver 
                 </div>
               </motion.div>
             </div>

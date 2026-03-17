@@ -68,11 +68,11 @@ export default function InvestmentPage() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                   <span className="font-semibold text-gray-700">Market Opportunity</span>
-                  <span className="text-teal-600 font-bold">$1B+</span>
+                  <span className="text-teal-600 font-bold">$500M+</span>
                 </div>
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                  <span className="font-semibold text-gray-700">Active Users</span>
-                  <span className="text-teal-600 font-bold">1400+</span>
+                  <span className="font-semibold text-gray-700"> Users</span>
+                  <span className="text-teal-600 font-bold">6,400+</span>
                 </div>
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                   <span className="font-semibold text-gray-700">Monthly Freight Transport</span>

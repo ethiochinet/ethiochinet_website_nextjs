@@ -1,4 +1,3 @@
-// src/app/careers/[id]/page.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -9,7 +8,7 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { getJobVacancy, submitJobApplication } from '@/lib/firebase/firestore';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { HiArrowLeft, HiUpload } from 'react-icons/hi';
+import { HiArrowLeft, HiUpload, HiLink } from 'react-icons/hi';
 
 interface JobVacancy {
   id: string;
@@ -26,6 +25,7 @@ interface ApplicationForm {
   fullName: string;
   email: string;
   phone: string;
+  linkedIn: string; // New field
   coverLetter: string;
   cv: FileList;
 }
@@ -72,9 +72,11 @@ export default function JobApplicationPage() {
         fullName: data.fullName,
         email: data.email,
         phone: data.phone,
+        linkedIn: data.linkedIn || null, // Add LinkedIn URL
         coverLetter: data.coverLetter,
         cvUrl,
-        status: 'pending'
+        status: 'pending',
+        appliedAt: new Date().toISOString()
       };
 
       const result = await submitJobApplication(applicationData);
@@ -90,6 +92,13 @@ export default function JobApplicationPage() {
     } finally {
       setSubmitting(false);
     }
+  };
+
+  // LinkedIn URL validation
+  const validateLinkedInUrl = (url: string) => {
+    if (!url) return true; // Optional field
+    const linkedInRegex = /^(https?:\/\/)?(www\.)?linkedin\.com\/(in|company)\/[a-zA-Z0-9-]+\/?$/;
+    return linkedInRegex.test(url) || 'Please enter a valid LinkedIn profile URL';
   };
 
   if (loading) {
@@ -164,6 +173,17 @@ export default function JobApplicationPage() {
                   <li key={index} className="text-gray-700">{req}</li>
                 ))}
               </ul>
+
+              {job.responsibilities && job.responsibilities.length > 0 && (
+                <>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Responsibilities</h2>
+                  <ul className="list-disc pl-5 mb-6 space-y-2">
+                    {job.responsibilities.map((resp, index) => (
+                      <li key={index} className="text-gray-700">{resp}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </div>
           </div>
 
@@ -178,8 +198,15 @@ export default function JobApplicationPage() {
                 </label>
                 <input
                   type="text"
-                  {...register('fullName', { required: 'Full name is required' })}
+                  {...register('fullName', { 
+                    required: 'Full name is required',
+                    minLength: {
+                      value: 2,
+                      message: 'Name must be at least 2 characters'
+                    }
+                  })}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-200"
+                  placeholder="Enter your full name"
                 />
                 {errors.fullName && (
                   <p className="mt-1 text-sm text-red-600">{errors.fullName.message}</p>
@@ -196,10 +223,11 @@ export default function JobApplicationPage() {
                     required: 'Email is required',
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: 'Invalid email address'
+                      message: 'Please enter a valid email address'
                     }
                   })}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-200"
+                  placeholder="you@example.com"
                 />
                 {errors.email && (
                   <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -212,12 +240,46 @@ export default function JobApplicationPage() {
                 </label>
                 <input
                   type="tel"
-                  {...register('phone', { required: 'Phone number is required' })}
+                  {...register('phone', { 
+                    required: 'Phone number is required',
+                    pattern: {
+                      value: /^[0-9+\-\s()]{10,}$/,
+                      message: 'Please enter a valid phone number'
+                    }
+                  })}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-200"
+                  placeholder="+251 912 345 678"
                 />
                 {errors.phone && (
                   <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
                 )}
+              </div>
+
+              {/* New LinkedIn URL Field */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <span className="flex items-center">
+                    <HiLink className="w-4 h-4 mr-1 text-teal-600" />
+                    LinkedIn Profile URL (Optional)
+                  </span>
+                </label>
+                <div className="relative">
+                  <input
+                    type="url"
+                    {...register('linkedIn', { 
+                      validate: validateLinkedInUrl
+                    })}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-200 pl-10"
+                    placeholder="https://www.linkedin.com/in/yourprofile"
+                  />
+                  <HiLink className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                </div>
+                {errors.linkedIn && (
+                  <p className="mt-1 text-sm text-red-600">{errors.linkedIn.message}</p>
+                )}
+                <p className="mt-1 text-xs text-gray-500">
+                  Share your LinkedIn profile to help us learn more about your professional background
+                </p>
               </div>
 
               <div>
@@ -228,7 +290,7 @@ export default function JobApplicationPage() {
                   rows={5}
                   {...register('coverLetter')}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-200"
-                  placeholder="Tell us why you're interested in this position..."
+                  placeholder="Tell us why you're interested in this position and why you'd be a great fit..."
                 />
               </div>
 
@@ -262,14 +324,27 @@ export default function JobApplicationPage() {
                 {errors.cv && (
                   <p className="mt-1 text-sm text-red-600">{errors.cv.message}</p>
                 )}
+                <p className="mt-1 text-xs text-gray-500">
+                  Max file size: 5MB. Accepted formats: PDF, DOC, DOCX
+                </p>
               </div>
 
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
-                {submitting ? 'Submitting...' : 'Submit Application'}
+                {submitting ? (
+                  <>
+                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>Submitting...</span>
+                  </>
+                ) : (
+                  'Submit Application'
+                )}
               </button>
             </form>
           </div>
