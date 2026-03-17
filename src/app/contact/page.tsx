@@ -68,7 +68,7 @@ export default function ContactPage() {
                   <a href="mailto:info@ethiochinet.com" className="text-teal-600 hover:text-teal-700">
                     info@ethiochinet.com
                   </a>
-                  <p className="text-sm text-gray-500 mt-1">Support: support@ethiochinet.com</p>
+                  <p className="text-sm text-gray-500 mt-1">Support: info@ethiochinet.com</p>
                 </div>
               </div>
             </div>
@@ -80,10 +80,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                  <a href="tel:+251911234567" className="text-teal-600 hover:text-teal-700">
-                    +251 911 234 567
+                  <a href="tel:+251970555577" className="text-teal-600 hover:text-teal-700">
+                    +251 970 55 55 77 / +251 90 377 99 55
                   </a>
-                  <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9:00 AM - 6:00 PM</p>
+                  <p className="text-sm text-gray-500 mt-1">Mon-Sat, 8:00 AM - 6:00 PM</p>
                 </div>
               </div>
             </div>
@@ -96,8 +96,8 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Office</h3>
                   <p className="text-gray-700">
-                    Bole Road, Zequala Complex<br />
-                    4th Floor, Office 401<br />
+                    Bole , Gerji Mebrat Hail<br />
+                    2nd Floor, Office 107<br />
                     Addis Ababa, Ethiopia
                   </p>
                 </div>

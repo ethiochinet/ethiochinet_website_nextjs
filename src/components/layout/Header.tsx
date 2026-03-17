@@ -21,6 +21,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [logoError, setLogoError] = useState(false);
   const pathname = usePathname();
 
   // Handle hydration
@@ -69,15 +70,31 @@ export default function Header() {
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
+          {/* Logo with Image */}
           <Link href="/" className="flex items-center space-x-2 group">
             <motion.div 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center group-hover:bg-teal-700 transition-colors"
+              className="relative w-10 h-10 overflow-hidden"
             >
-              <span className="text-white font-bold text-xl">E</span>
+              {!logoError ? (
+                <Image
+                  src="/images/ethiochinet_logo-transparent.png"
+                  alt="Ethiochinet Logo"
+                  fill
+                  className="object-contain"
+                  onError={() => setLogoError(true)}
+                  priority
+                />
+              ) : (
+                // Fallback to text logo if image fails to load
+                <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">E</span>
+                </div>
+              )}
             </motion.div>
+            
+            {/* Optional: Keep text logo or use just the image */}
             <span className="font-bold text-xl text-gray-900 group-hover:text-teal-600 transition-colors">
               Ethiochinet
             </span>

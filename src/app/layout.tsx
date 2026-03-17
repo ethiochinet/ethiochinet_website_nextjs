@@ -1,7 +1,8 @@
-// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from 'sonner';
 import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,8 +32,15 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Header />
-        {/* Removed pt-16 lg:pt-20 from here since HeroSection handles its own padding */}
-        {children}
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+        <Toaster 
+          position="top-right"
+          richColors
+          closeButton
+        />
       </body>
     </html>
   );

@@ -52,9 +52,9 @@ export default function CareersPage() {
             Join us in transforming Ethiopia's logistics industry through technology
           </p>
           <div className="relative h-64 rounded-2xl overflow-hidden">
-            <Image
-              src="/images/careers-team.jpg"
-              alt="Ethiochinet Team"
+                          <Image
+             src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop"
+              alt="Ethiochinet Team Collaboration"
               fill
               className="object-cover"
             />

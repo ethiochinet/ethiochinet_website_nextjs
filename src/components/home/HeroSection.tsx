@@ -4,15 +4,81 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaApple, FaGooglePlay } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '@/lib/firebase/config';
+
+interface Statistics {
+  registeredDrivers: number;
+  freightPosted: number;
+  deliveriesCompleted: number;
+  citiesServed: number;
+  app_download?: string | number;
+}
+
+// Simple counter component
+const StatCounter = ({ value, suffix = '' }: { value: number; suffix?: string }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Simple animation when component mounts
+    setIsVisible(true);
+    
+    if (isVisible && value > 0) {
+      const duration = 1500; // 1.5 seconds
+      const steps = 60;
+      const increment = value / (duration / 16);
+      let current = 0;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= value) {
+          setCount(value);
+          clearInterval(timer);
+        } else {
+          setCount(Math.floor(current));
+        }
+      }, 16);
+
+      return () => clearInterval(timer);
+    }
+  }, [isVisible, value]);
+
+  return <span>{count.toLocaleString()}{suffix}</span>;
+};
 
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false);
+  const [stats, setStats] = useState<Statistics>({
+    registeredDrivers: 0,
+    freightPosted: 0,
+    deliveriesCompleted: 0,
+    citiesServed: 0
+  });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setMounted(true);
+    fetchStatistics();
   }, []);
 
-  if (!mounted) {
+  const fetchStatistics = async () => {
+    try {
+      const statsDocRef = doc(db, 'statistics', 'sdMb0ulv8z7FfKjHclMH');
+      const docSnap = await getDoc(statsDocRef);
+      
+      if (docSnap.exists()) {
+        const data = docSnap.data() as Statistics;
+        setStats(data);
+      }
+    } catch (error) {
+      console.error('Error fetching statistics:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (!mounted || loading) {
     return null;
   }
 
@@ -27,9 +93,8 @@ export default function HeroSection() {
       <div className="absolute top-40 right-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
       <div className="absolute bottom-20 left-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Added pt-32 to account for fixed header */}
-        <div className="flex flex-col lg:flex-row items-center justify-between min-h-screen pt-32 lg:pt-0">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between min-h-screen pt-40 lg:pt-32">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -42,7 +107,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-6">
+              <span className="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-6 mt-4 lg:mt-0">
                 🚀 Ethiopia's #1 Digital Logistics Platform
               </span>
             </motion.div>
@@ -120,7 +185,7 @@ export default function HeroSection() {
               </Link>
             </motion.div>
 
-            {/* Stats */}
+            {/* Dynamic Stats from Firebase */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -128,15 +193,21 @@ export default function HeroSection() {
               className="flex flex-wrap gap-8 mt-12 justify-center lg:justify-start"
             >
               <div>
-                <div className="text-3xl font-bold text-teal-600">5,000+</div>
-                <div className="text-sm text-gray-600">Registered Drivers</div>
+                <div className="text-3xl font-bold text-teal-600">
+                  <StatCounter value={typeof stats.app_download === 'number' ? stats.app_download : Number(stats.app_download) || 0} suffix="+" />
+                </div>
+                <div className="text-sm text-gray-600">App Downloads </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-teal-600">10,000+</div>
+                <div className="text-3xl font-bold text-teal-600">
+                  <StatCounter value={stats.freightPosted} suffix="+" />
+                </div>
                 <div className="text-sm text-gray-600">Freight Posted</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-teal-600">15+</div>
+                <div className="text-3xl font-bold text-teal-600">
+                  <StatCounter value={stats.citiesServed} suffix="+" />
+                </div>
                 <div className="text-sm text-gray-600">Cities Served</div>
               </div>
             </motion.div>

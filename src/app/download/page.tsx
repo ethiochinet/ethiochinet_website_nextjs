@@ -39,7 +39,7 @@ export default function DownloadPage() {
               <div className="flex items-center justify-center mb-6">
                 <div className="relative w-48 h-48">
                   <Image
-                    src="/images/app-mockup-owner.png"
+                    src="/images/image_owner-trans.png"
                     alt="Ethiochinet App"
                     fill
                     className="object-contain"
@@ -71,7 +71,7 @@ export default function DownloadPage() {
 
               <div className="space-y-3">
                 <Link
-                  href="#"
+                  href="https://apps.apple.com/us/app/ethiochinet-owner/id6741787980"
                   className="flex items-center justify-center space-x-3 bg-gray-900 text-white px-6 py-4 rounded-xl hover:bg-gray-800 transition-all w-full"
                 >
                   <FaApple className="text-2xl" />
@@ -82,7 +82,7 @@ export default function DownloadPage() {
                 </Link>
                 
                 <Link
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=com.ethiochinet.ethiochinet"
                   className="flex items-center justify-center space-x-3 bg-teal-600 text-white px-6 py-4 rounded-xl hover:bg-teal-700 transition-all w-full"
                 >
                   <FaGooglePlay className="text-2xl" />
@@ -102,16 +102,16 @@ export default function DownloadPage() {
             transition={{ delay: 0.2 }}
             className="bg-white rounded-3xl shadow-xl overflow-hidden"
           >
-            <div className="bg-blue-600 p-6 text-white">
+            <div className="bg-teal-600 p-6 text-white">
               <h2 className="text-2xl font-bold mb-2">Ethiochinet Driver App</h2>
-              <p className="text-blue-100">For Vehicle Owners & Drivers</p>
+              <p className="text-teal-100">For Vehicle Owners & Drivers</p>
             </div>
             
             <div className="p-6">
               <div className="flex items-center justify-center mb-6">
                 <div className="relative w-48 h-48">
                   <Image
-                    src="/images/app-mockup-driver.png"
+                    src="/images/image_driver-trans.png"
                     alt="Ethiochinet Driver App"
                     fill
                     className="object-contain"
@@ -143,7 +143,7 @@ export default function DownloadPage() {
 
               <div className="space-y-3">
                 <Link
-                  href="#"
+                  href="https://apps.apple.com/us/app/ethiochinet-driver/id6741788154"
                   className="flex items-center justify-center space-x-3 bg-gray-900 text-white px-6 py-4 rounded-xl hover:bg-gray-800 transition-all w-full"
                 >
                   <FaApple className="text-2xl" />
@@ -154,8 +154,8 @@ export default function DownloadPage() {
                 </Link>
                 
                 <Link
-                  href="#"
-                  className="flex items-center justify-center space-x-3 bg-blue-600 text-white px-6 py-4 rounded-xl hover:bg-blue-700 transition-all w-full"
+                  href="https://play.google.com/store/apps/details?id=com.ethiochinet.ethiochinet_driver"
+                  className="flex items-center justify-center space-x-3 bg-teal-600 text-white px-6 py-4 rounded-xl hover:bg-blue-700 transition-all w-full"
                 >
                   <FaGooglePlay className="text-2xl" />
                   <div className="text-left">

@@ -72,11 +72,11 @@ export default function InvestmentPage() {
                 </div>
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                   <span className="font-semibold text-gray-700">Active Users</span>
-                  <span className="text-teal-600 font-bold">15,000+</span>
+                  <span className="text-teal-600 font-bold">1400+</span>
                 </div>
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                  <span className="font-semibold text-gray-700">Monthly Transactions</span>
-                  <span className="text-teal-600 font-bold">5,000+</span>
+                  <span className="font-semibold text-gray-700">Monthly Freight Transport</span>
+                  <span className="text-teal-600 font-bold">4,000+</span>
                 </div>
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                   <span className="font-semibold text-gray-700">Cities Covered</span>
@@ -93,7 +93,7 @@ export default function InvestmentPage() {
                 Ethiochinet is positioned to capture this growing market with our innovative platform.
               </p>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>Expanding to 25+ cities by 2025</li>
+                <li>Expanding to 25+ cities by 2027</li>
                 <li>Integration with cross-border trade routes</li>
                 <li>AI-powered route optimization</li>
                 <li>Digital payment solutions for drivers</li>
