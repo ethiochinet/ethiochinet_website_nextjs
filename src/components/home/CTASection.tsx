@@ -58,7 +58,7 @@ export default function CTASection() {
               href="/register-driver"
               className="px-6 py-3 bg-white/20 text-white rounded-lg border-2 border-white hover:bg-white/30 transition-colors font-medium"
             >
-              Register as Driver
+           Register as Freight Vehicle Driver/Owner
             </Link>
           </div>
         </motion.div>

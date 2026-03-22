@@ -1,0 +1,203 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "careers": "Careers",
+    "investment": "Investment",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "download": "Download",
+    "register": "Register",
+    "signIn": "Sign In",
+    "logout": "Logout",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "subscribe": "Subscribe",
+    "submit": "Submit",
+    "send": "Send",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "blog": "Blog",
+    "careers": "Careers",
+    "investment": "Investment",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "download": "Download Apps"
+  },
+  "hero": {
+    "badge": "Ethiopia's #1 Digital Logistics Platform",
+    "title": "Ethiopia's Digital Logistics Platform",
+    "subtitle": "Connecting Freight Owners and Drivers",
+    "description": "Revolutionizing freight transportation in Ethiopia through technology. Post loads, find trucks, and track deliveries in real-time.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "registerOwner": "Register as Freight Owner",
+    "registerDriver": "Register as Driver",
+    "stats": {
+      "drivers": "Registered Drivers",
+      "freight": "Freight Posted",
+      "cities": "Cities Served"
+    }
+  },
+  "about": {
+    "title": "About Ethiochinet",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To revolutionize Ethiopia's logistics sector by creating a seamless digital platform that connects freight owners with reliable drivers, making transportation efficient, transparent, and accessible to all."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become Ethiopia's most trusted digital logistics platform, empowering businesses and drivers while contributing to the growth of the nation's economy through innovative technology solutions."
+    },
+    "story": {
+      "title": "Our Story",
+      "description": "Ethiochinet was born from a simple observation: Ethiopia's logistics sector was fragmented, inefficient, and lacked transparency. In 2023, our founding team came together to bridge this gap."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "trust": "Trust & Transparency",
+      "innovation": "Innovation First",
+      "customer": "Customer Focus",
+      "impact": "Local Impact",
+      "efficiency": "Efficiency",
+      "community": "Community"
+    }
+  },
+  "features": {
+    "title": "Platform Features",
+    "subtitle": "Everything you need to manage your logistics operations efficiently",
+    "smartMatching": {
+      "title": "Smart Freight Matching",
+      "description": "AI-powered algorithm matches your freight with the most suitable drivers in real-time."
+    },
+    "verifiedDrivers": {
+      "title": "Verified Drivers",
+      "description": "All drivers undergo thorough verification for your peace of mind."
+    },
+    "notifications": {
+      "title": "Real-time Notifications",
+      "description": "Instant updates on your freight status, driver location, and delivery confirmations."
+    },
+    "secure": {
+      "title": "Secure Platform",
+      "description": "End-to-end encrypted transactions and secure payment processing."
+    },
+    "pricing": {
+      "title": "Transparent Pricing",
+      "description": "Clear, upfront pricing with no hidden fees or surprises."
+    },
+    "network": {
+      "title": "Nationwide Network",
+      "description": "Access to a growing network of drivers across all major Ethiopian cities."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Simple steps to start your logistics journey with Ethiochinet",
+    "forOwners": "For Freight Owners",
+    "forDrivers": "For Drivers",
+    "steps": {
+      "download": "Download App",
+      "register": "Register",
+      "post": "Post Freight",
+      "match": "Match with Drivers",
+      "track": "Track Delivery",
+      "browse": "Browse Freight",
+      "accept": "Accept Jobs",
+      "deliver": "Deliver & Earn"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Trusted by freight owners and drivers across Ethiopia"
+  },
+  "partners": {
+    "title": "Our Partners & Supporters",
+    "subtitle": "Working together with industry leaders to transform Ethiopia's logistics sector",
+    "trustedBy": "Trusted by industry leaders"
+  },
+  "blog": {
+    "title": "Blog & News",
+    "subtitle": "Insights and updates from Ethiochinet and the logistics industry",
+    "readMore": "Read More",
+    "viewAll": "View All Posts",
+    "categories": {
+      "technology": "Logistics Technology",
+      "updates": "Startup Updates",
+      "industry": "Freight Industry",
+      "economy": "Ethiopian Economy"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about Ethiochinet",
+    "search": "Search questions...",
+    "stillHaveQuestions": "Still Have Questions?",
+    "contactSupport": "Contact Support",
+    "noResults": "No questions found",
+    "clearFilters": "Clear filters"
+  },
+  "footer": {
+    "description": "Transforming Ethiopia's logistics through technology, connecting freight owners with drivers seamlessly across the nation.",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "connect": "Connect With Us",
+    "stayUpdated": "Stay Updated",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "Enter your email",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "sitemap": "Sitemap",
+    "rights": "All rights reserved.",
+    "downloadApps": "Download our apps"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "login": "Admin Login",
+    "logout": "Logout",
+    "welcome": "Welcome to your admin dashboard",
+    "blog": "Blog Posts",
+    "jobs": "Job Vacancies",
+    "investments": "Investments",
+    "contacts": "Contact Messages",
+    "partners": "Partners",
+    "testimonials": "Testimonials",
+    "faqs": "FAQs",
+    "statistics": "Statistics",
+    "subscriptions": "Subscriptions",
+    "applicants": "Applicants",
+    "new": "New",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "status": "Status",
+    "actions": "Actions",
+    "search": "Search...",
+    "total": "Total"
+  }
+  
+
+
+}

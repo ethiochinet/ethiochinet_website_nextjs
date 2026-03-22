@@ -24,7 +24,7 @@ export default function Home() {
       <BlogSection />
       <FAQSection />
       <CTASection />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
