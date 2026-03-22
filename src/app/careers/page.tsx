@@ -53,7 +53,7 @@ export default function CareersPage() {
           </p>
           <div className="relative h-64 rounded-2xl overflow-hidden">
                           <Image
-             src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop"
+             src="https://firebasestorage.googleapis.com/v0/b/myethiochinet.firebasestorage.app/o/user_images%2Fteamethiochinet.png?alt=media&token=a81885ff-6bd2-4392-ab25-b9de0b873426"
               alt="Ethiochinet Team Collaboration"
               fill
               className="object-cover"

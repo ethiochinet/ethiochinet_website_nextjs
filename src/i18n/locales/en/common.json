@@ -1,0 +1,63 @@
+{
+  "header": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "guidelines": "Guidelines",
+    "contactUs": "Contact Us",
+    "dashboard": "Dashboard",
+    "addChallenge": "Add Challenge",
+    "manageTestimonials": "Manage Testimonials",
+    "logout": "Logout",
+    "tiktokChallengeHub": "TikTok Challenge Hub"
+  },
+  "hero": {
+    "createParticipateWin": "Create, Participate, and",
+    "winAmazingPrizes": "Win Amazing Prizes!",
+    "description": "The ultimate platform for TikTok challenges. Whether you're a creator or participant, showcase your talent and compete with the best!",
+    "getStartedFree": "Get Started Free",
+    "createYourChallenge": "Create Your Challenge",
+    "browseChallenges": "Browse Challenges",
+    "exploreChallenges": "Explore Challenges",
+    "postYourVideos": "Post Your Videos",
+    "joinCommunities": "Join Communities",
+    "winExcitingPrizes": "Win Exciting Prizes"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "followUs": "Follow Us",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "allRightsReserved": "All rights reserved",
+    "madeWith": "Made with",
+    "forCreators": "for TikTok creators worldwide"
+  },
+  "common": {
+    "selectLanguage": "Select Language",
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "submit": "Submit",
+    "search": "Search",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "signInWithGoogle": "Sign in with Google",
+    "welcomeBack": "Welcome back",
+    "selectUserType": "Choose how you want to use the platform",
+    "iAmParticipant": "I'm a Participant",
+    "iAmCreator": "I'm a Challenge Creator",
+    "participantDesc": "Join challenges and showcase my talent",
+    "creatorDesc": "Create challenges and manage participants"
+  }
+}

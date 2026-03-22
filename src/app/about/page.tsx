@@ -103,7 +103,7 @@ export default function AboutPage() {
               className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl"
             >
               <Image
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0"
+                src="https://firebasestorage.googleapis.com/v0/b/myethiochinet.firebasestorage.app/o/user_images%2Fteamethiochinet.png?alt=media&token=a81885ff-6bd2-4392-ab25-b9de0b873426"
                 alt="Ethiochinet Team"
                 fill
                 className="object-cover"

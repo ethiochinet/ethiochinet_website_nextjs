@@ -1,0 +1,63 @@
+{
+  "header": {
+    "home": "መነሻ",
+    "aboutUs": "ስለ እኛ",
+    "guidelines": "መመሪያዎች",
+    "contactUs": "አግኙን",
+    "dashboard": "ዳሽቦርድ",
+    "addChallenge": "ፈተና ያክሉ",
+    "manageTestimonials": "ምስክርነቶችን ያስተዳድሩ",
+    "logout": "ውጣ",
+    "tiktokChallengeHub": "ቲክቶክ ፈተና ማዕከል"
+  },
+  "hero": {
+    "createParticipateWin": "ፍጠር፣ ተሳተፍ እና",
+    "winAmazingPrizes": "አስደናቂ ሽልማቶችን አሸንፍ!",
+    "description": "ለቲክቶክ ፈተናዎች የተሟላ መድረክ። ፈጣሪም ሆንክ ተሳታፊም፣ ችሎታህን አሳይ እና ከምርጦቹ ጋር ተወዳደር!",
+    "getStartedFree": "በነጻ ይጀምሩ",
+    "createYourChallenge": "ፈተናህን ፍጠር",
+    "browseChallenges": "ፈተናዎችን ያስሱ",
+    "exploreChallenges": "ፈተናዎችን ያስሱ",
+    "postYourVideos": "ቪዲዮዎችህን ልጥፍ",
+    "joinCommunities": "ማህበረሰቦችን ተቀላቀል",
+    "winExcitingPrizes": "አስደሳች ሽልማቶችን አሸንፍ"
+  },
+  "footer": {
+    "quickLinks": "ፈጣን አገናኞች",
+    "contactInfo": "የእውቂያ መረጃ",
+    "followUs": "ይከተሉን",
+    "termsOfService": "የአገልግሎት ውሎች",
+    "privacyPolicy": "የግላዊነት ፖሊሲ",
+    "allRightsReserved": "መብቱ በህግ የተጠበቀ ነው",
+    "madeWith": "የተሰራው በ",
+    "forCreators": "ለቲክቶክ ፈጣሪዎች በዓለም ዙሪያ"
+  },
+  "common": {
+    "selectLanguage": "ቋንቋ ይምረጡ",
+    "loading": "በመጫን ላይ...",
+    "error": "ስህተት",
+    "retry": "እንደገና ሞክር",
+    "save": "አስቀምጥ",
+    "cancel": "ሰርዝ",
+    "delete": "ሰርዝ",
+    "edit": "አርትዕ",
+    "view": "ተመልከት",
+    "submit": "አስገባ",
+    "search": "ፈልግ",
+    "back": "ተመለስ",
+    "next": "ቀጥል",
+    "previous": "ቀዳሚ"
+  },
+  "auth": {
+    "signIn": "ግባ",
+    "signUp": "ተመዝገብ",
+    "signOut": "ውጣ",
+    "signInWithGoogle": "በGoogle ይግቡ",
+    "welcomeBack": "እንኳን ደህና መጡ",
+    "selectUserType": "መድረኩን እንዴት መጠቀም እንደሚፈልጉ ይምረጡ",
+    "iAmParticipant": "ተሳታፊ ነኝ",
+    "iAmCreator": "ፈተና ፈጣሪ ነኝ",
+    "participantDesc": "ፈተናዎችን ተቀላቀል እና ችሎታህን አሳይ",
+    "creatorDesc": "ፈተናዎችን ፍጠር እና ተሳታፊዎችን አስተዳድር"
+  }
+}
