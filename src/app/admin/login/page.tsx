@@ -7,6 +7,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/lib/firebase/config';
 import { HiMail, HiClock, HiEye, HiEyeOff } from 'react-icons/hi';
 import Link from 'next/link';
+import Image from 'next/image';
 import { toast } from 'sonner';
 
 export default function AdminLogin() {
@@ -66,8 +67,14 @@ export default function AdminLogin() {
       >
         <div>
           <div className="flex justify-center">
-           // add logo here if you have one
-           
+            <Image
+              src="/images/ethiochinet_logo-transparent.png"
+              alt="Ethiochinet Logo"
+              width={100}
+              height={40}
+              className="object-contain"
+              priority
+            />
           </div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Admin Login

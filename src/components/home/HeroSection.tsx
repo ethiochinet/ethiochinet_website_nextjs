@@ -6,6 +6,7 @@ import { FaApple, FaGooglePlay } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase/config';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface Statistics {
   registeredDrivers: number;
@@ -25,8 +26,7 @@ const StatCounter = ({ value, suffix = '' }: { value: number; suffix?: string })
     setIsVisible(true);
     
     if (isVisible && value > 0) {
-      const duration = 1500; // 1.5 seconds
-      const steps = 60;
+      const duration = 1500;
       const increment = value / (duration / 16);
       let current = 0;
       
@@ -48,6 +48,7 @@ const StatCounter = ({ value, suffix = '' }: { value: number; suffix?: string })
 };
 
 export default function HeroSection() {
+  const { t } = useTranslation();
   const [mounted, setMounted] = useState(false);
   const [stats, setStats] = useState<Statistics>({
     registeredDrivers: 0,
@@ -108,34 +109,33 @@ export default function HeroSection() {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <span className="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold mb-6 mt-4 lg:mt-0">
-                🚀 Ethiopia's #1 Digital Logistics Platform
+                {t('hero.badge')}
               </span>
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
               className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6"
             >
-              Ethiopia's Digital Logistics Platform
+              {t('hero.title1')}
               <span className="block text-teal-600 mt-2">
-                Connecting Freight Owners and Drivers
+                {t('hero.title2')}
               </span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0"
             >
-              Revolutionizing freight transportation in Ethiopia through technology. 
-              Post loads, find trucks, and track deliveries in real-time.
+              {t('hero.description')}
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
@@ -147,25 +147,25 @@ export default function HeroSection() {
               >
                 <FaApple className="text-2xl" />
                 <div className="text-left">
-                  <div className="text-xs">Download on the</div>
-                  <div className="text-sm font-semibold">App Store</div>
+                  <div className="text-xs">{t('hero.downloadOnThe')}</div>
+                  <div className="text-sm font-semibold">{t('hero.appStore')}</div>
                 </div>
               </Link>
-              
+
               <Link
                 href="/download"
                 className="flex items-center justify-center space-x-3 bg-gray-900 text-white px-6 py-4 rounded-xl hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <FaGooglePlay className="text-2xl" />
                 <div className="text-left">
-                  <div className="text-xs">Get it on</div>
-                  <div className="text-sm font-semibold">Google Play</div>
+                  <div className="text-xs">{t('hero.getItOn')}</div>
+                  <div className="text-sm font-semibold">{t('hero.googlePlay')}</div>
                 </div>
               </Link>
             </motion.div>
 
             {/* Registration Buttons */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
@@ -173,15 +173,21 @@ export default function HeroSection() {
             >
               <Link
                 href="/download"
-                className="px-6 py-3 bg-white text-teal-600 rounded-lg border-2 border-teal-600 font-semibold hover:bg-teal-50 transition-colors"
+                className="px-5 py-2.5 bg-white text-teal-600 rounded-lg border-2 border-teal-600 font-semibold hover:bg-teal-50 transition-colors text-sm"
               >
-                Register as Freight Owner
+                {t('hero.registerOwner')}
               </Link>
               <Link
                 href="/download"
-                className="px-6 py-3 bg-white text-teal-600 rounded-lg border-2 border-teal-600 font-semibold hover:bg-teal-50 transition-colors"
+                className="px-5 py-2.5 bg-white text-blue-600 rounded-lg border-2 border-blue-600 font-semibold hover:bg-blue-50 transition-colors text-sm"
               >
-               Register as Freight Vehicle Driver/Owner
+                {t('hero.registerDriver')}
+              </Link>
+              <Link
+                href="/download"
+                className="px-5 py-2.5 bg-white text-purple-600 rounded-lg border-2 border-purple-600 font-semibold hover:bg-purple-50 transition-colors text-sm"
+              >
+                {t('hero.registerVehicleOwner')}
               </Link>
             </motion.div>
 
@@ -196,19 +202,19 @@ export default function HeroSection() {
                 <div className="text-3xl font-bold text-teal-600">
                   <StatCounter value={typeof stats.app_download === 'number' ? stats.app_download : Number(stats.app_download) || 0} suffix="+" />
                 </div>
-                <div className="text-sm text-gray-600">App Downloads </div>
+                <div className="text-sm text-gray-600">{t('hero.stats.downloads')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-teal-600">
                   <StatCounter value={stats.freightPosted} suffix="+" />
                 </div>
-                <div className="text-sm text-gray-600">Freight Posted</div>
+                <div className="text-sm text-gray-600">{t('hero.stats.freight')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-teal-600">
                   <StatCounter value={stats.citiesServed} suffix="+" />
                 </div>
-                <div className="text-sm text-gray-600">Cities Served</div>
+                <div className="text-sm text-gray-600">{t('hero.stats.cities')}</div>
               </div>
             </motion.div>
           </motion.div>
@@ -220,62 +226,72 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="w-full lg:w-1/2 relative hidden lg:block"
           >
-            <div className="relative h-[500px] w-full flex items-center justify-center">
-              {/* Center circle */}
+            <div className="relative h-[520px] w-full flex items-center justify-center">
+              {/* Background glow */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-96 h-96 bg-teal-200 rounded-full opacity-20 animate-pulse"></div>
               </div>
-              
-              {/* Freight Owner App Mockup */}
+
+              {/* Freight Owner App Mockup — left */}
               <motion.div
-                animate={{ y: [0, -20, 0] }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
-                  ease: "easeInOut",
-                  repeatType: "reverse"
-                }}
-                className="absolute left-0 top-10 w-64 bg-white rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-800 z-10"
+                animate={{ y: [0, -18, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
+                className="absolute left-0 top-12 w-52 bg-white rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-800 z-10"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="bg-teal-600 h-14 flex items-center justify-center">
-                  <span className="text-white font-semibold text-sm">Ethiochinet Freight Owner</span>
+                <div className="bg-teal-600 h-12 flex items-center justify-center">
+                  <span className="text-white font-semibold text-xs px-2 text-center leading-tight">Ethiochinet Freight Owner</span>
                 </div>
-                <div className="p-4 space-y-3">
-                  <div className="h-16 bg-gray-200 rounded-lg animate-pulse"></div>
-                  <div className="h-16 bg-gray-200 rounded-lg animate-pulse"></div>
-                  <div className="h-16 bg-gray-200 rounded-lg animate-pulse"></div>
-                  <div className="h-8 bg-teal-100 rounded-lg"></div>
+                <div className="p-3 space-y-2.5">
+                  <div className="h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+                  <div className="h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+                  <div className="h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+                  <div className="h-7 bg-teal-100 rounded-lg"></div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-teal-600 text-white text-xs text-center py-2">
-                  Freight Owner App
+                <div className="bg-teal-600 text-white text-xs text-center py-1.5">
+                  For Freight Owners
                 </div>
               </motion.div>
 
-              {/* Driver App Mockup */}
+              {/* Vehicle Owner App Mockup — center */}
               <motion.div
-                animate={{ y: [0, 20, 0] }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
-                  ease: "easeInOut",
-                  delay: 1,
-                  repeatType: "reverse"
-                }}
-                className="absolute right-0 bottom-10 w-64 bg-white rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-800 z-10"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5, repeatType: "reverse" }}
+                className="absolute left-1/2 -translate-x-1/2 top-0 w-52 bg-white rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-800 z-20"
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="bg-teal-600 h-14 flex items-center justify-center">
-                  <span className="text-white font-semibold text-sm">Ethiochinet Driver</span>
+                <div className="bg-purple-600 h-12 flex items-center justify-center">
+                  <span className="text-white font-semibold text-xs px-2 text-center leading-tight">Ethiochinet Vehicle Owner</span>
                 </div>
-                <div className="p-4 space-y-3">
-                  <div className="h-16 bg-gray-200 rounded-lg animate-pulse"></div>
-                  <div className="h-16 bg-gray-200 rounded-lg animate-pulse"></div>
-                  <div className="h-16 bg-gray-200 rounded-lg animate-pulse"></div>
-                  <div className="h-8 bg-blue-100 rounded-lg"></div>
+                <div className="p-3 space-y-2.5">
+                  <div className="h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+                  <div className="h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+                  <div className="h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+                  <div className="h-7 bg-purple-100 rounded-lg"></div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-teal-600 text-white text-xs text-center py-2">
-                  Ethiochinet Driver 
+                <div className="bg-purple-600 text-white text-xs text-center py-1.5">
+                  For Vehicle Owners
+                </div>
+              </motion.div>
+
+              {/* Driver App Mockup — right */}
+              <motion.div
+                animate={{ y: [0, 18, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1, repeatType: "reverse" }}
+                className="absolute right-0 bottom-12 w-52 bg-white rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-800 z-10"
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="bg-blue-600 h-12 flex items-center justify-center">
+                  <span className="text-white font-semibold text-xs px-2 text-center leading-tight">Ethiochinet Driver</span>
+                </div>
+                <div className="p-3 space-y-2.5">
+                  <div className="h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+                  <div className="h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+                  <div className="h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+                  <div className="h-7 bg-blue-100 rounded-lg"></div>
+                </div>
+                <div className="bg-blue-600 text-white text-xs text-center py-1.5">
+                  For Drivers
                 </div>
               </motion.div>
             </div>

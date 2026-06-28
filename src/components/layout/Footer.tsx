@@ -35,8 +35,9 @@ const footerLinks = {
     { name: 'Cookie Policy', href: '/cookies' },
   ],
   apps: [
-    { name: 'Ethiochinet App', href: '/download' },
+    { name: 'Freight Owner App', href: '/download' },
     { name: 'Driver App', href: '/download' },
+    { name: 'Vehicle Owner App', href: '/download' },
   ],
 };
 
@@ -284,8 +285,8 @@ export default function Footer() {
             </div>
             
             <p className="text-gray-400 mb-6 max-w-md">
-              Transforming Ethiopia's logistics through technology, connecting freight owners with drivers 
-              seamlessly across the nation.
+              Transforming Ethiopia's logistics through technology — connecting freight owners, drivers,
+              and vehicle owners seamlessly across the nation.
             </p>
 
             {/* Social Media Links - Highlighted Section */}

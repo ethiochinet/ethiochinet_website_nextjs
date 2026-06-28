@@ -1,261 +1,165 @@
-'use client';
+import type { Metadata } from 'next';
+import { siteConfig } from '@/lib/siteConfig';
+import FaqClient from './FaqClient';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HiChevronDown, HiSearch } from 'react-icons/hi';
-import { collection, getDocs, query, orderBy } from 'firebase/firestore';
-import { db } from '@/lib/firebase/config';
+const url = `${siteConfig.url}/faq`;
 
-interface FAQ {
-  id: string;
-  question: string;
-  answer: string;
-  category: string;
-  order: number;
-}
+export const metadata: Metadata = {
+  title: 'Frequently Asked Questions | Ethiochinet Logistics',
+  description:
+    'Find answers to common questions about Ethiochinet — how to register as a freight owner, driver, or vehicle owner; how freight matching works; digital agreements; payment processes; and real-time tracking.',
+  keywords: [
+    'Ethiochinet FAQ',
+    'how to register Ethiochinet',
+    'freight matching Ethiopia questions',
+    'how does Ethiochinet work',
+    'logistics app Ethiopia help',
+  ],
+  alternates: { canonical: url },
+  openGraph: {
+    url,
+    title: 'FAQ | Ethiochinet Logistics',
+    description:
+      'Answers to common questions about registering, freight matching, digital agreements, and tracking on Ethiochinet.',
+    images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'FAQPage',
+      '@id': `${url}/#faqpage`,
+      url,
+      name: 'Ethiochinet Frequently Asked Questions',
+      description: 'Common questions about Ethiochinet Logistics Technology and its three integrated apps.',
+      isPartOf: { '@id': `${siteConfig.url}/#website` },
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is Ethiochinet Logistics Technology?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ethiochinet Logistics Technology is Ethiopia\'s digital freight logistics platform operating a suite of three integrated applications: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner. These apps connect freight owners, drivers, and vehicle owners/operators to streamline the entire freight transportation process — from registering loads and signing digital agreements to real-time tracking and payment.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What apps does Ethiochinet offer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ethiochinet operates three integrated mobile apps: (1) Ethiochinet Freight Owner — for businesses and individuals who need to transport goods; (2) Ethiochinet Driver — for freight vehicle drivers who accept and complete transport jobs; and (3) Ethiochinet Vehicle Owner — for vehicle owners or operators who register their fleet and assign drivers.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What can a freight owner do on Ethiochinet?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Using the Ethiochinet Freight Owner app, freight owners can register their freight requirements, enter into digital transport agreements, authorize the commencement of transport, track their freight in transit in real-time, and confirm delivery upon completion.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does the Ethiochinet Driver app work?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Drivers use the Ethiochinet Driver app to accept freight orders, top up their digital wallet, and enter into digital agreements. They then proceed to the designated location to load freight and begin transport. Once transport has commenced, drivers monitor the shipment in real time. After delivering the freight, drivers receive payment. When available for work, drivers can set their status to indicate their current location and readiness for new jobs.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the Ethiochinet Vehicle Owner app used for?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The Ethiochinet Vehicle Owner app enables vehicle owners or operators to register their vehicle information, assign qualified drivers to each registered vehicle, and monitor all orders, agreements, and deliveries associated with that vehicle — tracked by plate number and carried out by the assigned driver.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is a digital agreement on Ethiochinet?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'A digital agreement on Ethiochinet is an electronic transport contract signed between a freight owner and a driver directly through the platform, before transport begins. It replaces paper-based agreements and ensures both parties have clear, documented commitments for each freight job.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does a freight owner need to authorize transport before it begins?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. The Ethiochinet Freight Owner app includes an explicit authorization step — the freight owner must authorize the commencement of transport before the driver proceeds. This gives freight owners full control over when their cargo begins its journey.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do drivers indicate they are available for new jobs?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'When drivers are available for work, they can set their status in the Ethiochinet Driver app to indicate their current location and readiness for new freight jobs. This helps match them with nearby freight owners looking for transport.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does the digital wallet work for drivers?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The Ethiochinet Driver app includes a digital wallet that drivers top up to participate on the platform. After successfully delivering freight, drivers receive their payment directly into this wallet, enabling a fully digital and cashless payment process.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does a vehicle owner assign a driver on Ethiochinet?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Through the Ethiochinet Vehicle Owner app, vehicle owners register their vehicle information and then assign a specific driver to each vehicle. All orders, agreements, and deliveries for that vehicle are subsequently tracked under the assigned driver and the vehicle\'s plate number.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can vehicle owners monitor multiple vehicles on Ethiochinet?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. The Ethiochinet Vehicle Owner app allows owners to register and manage multiple vehicles. Each vehicle\'s activity — including orders, agreements, and deliveries — is tracked individually by plate number and linked to its assigned driver.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'In which cities does Ethiochinet operate?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ethiochinet operates in 15+ Ethiopian cities, including Addis Ababa and major freight corridors such as the Djibouti–Addis route. The network is actively expanding to cover more of the country.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is Ethiochinet available on both Android and iOS?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. The Ethiochinet Freight Owner and Ethiochinet Driver apps are available on both iOS (App Store) and Android (Google Play). The Ethiochinet Vehicle Owner app is also available on both platforms.',
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+        { '@type': 'ListItem', position: 2, name: 'FAQ', item: url },
+      ],
+    },
+  ],
+};
 
 export default function FAQPage() {
-  const [faqs, setFaqs] = useState<FAQ[]>([]);
-  const [filteredFaqs, setFilteredFaqs] = useState<FAQ[]>([]);
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  useEffect(() => {
-    fetchFAQs();
-  }, []);
-
-  useEffect(() => {
-    filterFAQs();
-  }, [searchQuery, selectedCategory, faqs]);
-
-  const fetchFAQs = async () => {
-    try {
-      const faqsRef = collection(db, 'faqs');
-      const q = query(faqsRef, orderBy('order', 'asc'));
-      const querySnapshot = await getDocs(q);
-      
-      const faqsData = querySnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      })) as FAQ[];
-      
-      setFaqs(faqsData);
-      setFilteredFaqs(faqsData);
-    } catch (error) {
-      console.error('Error fetching FAQs:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const filterFAQs = () => {
-    let filtered = [...faqs];
-
-    // Filter by search query
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(faq => 
-        faq.question.toLowerCase().includes(query) || 
-        faq.answer.toLowerCase().includes(query)
-      );
-    }
-
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(faq => faq.category === selectedCategory);
-    }
-
-    setFilteredFaqs(filtered);
-  };
-
-  // Get unique categories
-  const categories = ['all', ...new Set(faqs.map(faq => faq.category))];
-
-  if (loading) {
-    return (
-      <div className="pt-20 min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-12">
-          <div className="animate-pulse">
-            <div className="h-10 bg-gray-200 rounded w-64 mx-auto mb-4"></div>
-            <div className="h-6 bg-gray-200 rounded w-96 mx-auto mb-8"></div>
-            <div className="space-y-4 max-w-3xl mx-auto">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="bg-white rounded-lg h-20"></div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="pt-20 min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Header Section */}
-      <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
-          >
-            Frequently Asked Questions
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-teal-100 max-w-2xl mx-auto"
-          >
-            Find answers to common questions about Ethiochinet
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Search and Filter Section */}
-      <section className="py-8 border-b bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            {/* Search Bar */}
-            <div className="relative mb-6">
-              <HiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl" />
-              <input
-                type="text"
-                placeholder="Search questions..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all"
-              />
-            </div>
-
-            {/* Category Filters */}
-            <div className="flex flex-wrap gap-3 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-lg font-medium capitalize transition-colors ${
-                    selectedCategory === category
-                      ? 'bg-teal-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-teal-50 hover:text-teal-600'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            {filteredFaqs.length > 0 ? (
-              <div className="space-y-4">
-                {filteredFaqs.map((faq, index) => (
-                  <motion.div
-                    key={faq.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden"
-                  >
-                    <button
-                      onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                      className="w-full text-left px-6 py-4 focus:outline-none"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex-1">
-                          <span className="text-sm text-teal-600 font-medium block mb-1">
-                            {faq.category}
-                          </span>
-                          <h3 className="text-lg font-semibold text-gray-900 pr-8">
-                            {faq.question}
-                          </h3>
-                        </div>
-                        <motion.div
-                          animate={{ rotate: openIndex === index ? 180 : 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="flex-shrink-0"
-                        >
-                          <HiChevronDown className="w-6 h-6 text-teal-600" />
-                        </motion.div>
-                      </div>
-                    </button>
-                    
-                    <AnimatePresence>
-                      {openIndex === index && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-6 pb-4 pt-2 border-t border-gray-100">
-                            <p className="text-gray-700 leading-relaxed">
-                              {faq.answer}
-                            </p>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                ))}
-              </div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-center py-12 bg-white rounded-xl shadow-sm"
-              >
-                <p className="text-gray-500 text-lg mb-2">No FAQs found</p>
-                <p className="text-gray-400">
-                  Try adjusting your search or filter to find what you're looking for.
-                </p>
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Still Have Questions Section */}
-      <section className="py-16 bg-teal-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Still Have Questions?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Can't find the answer you're looking for? Please contact our support team.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a
-                href="/contact"
-                className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-semibold"
-              >
-                Contact Support
-              </a>
-              <a
-                href="mailto:support@ethiochinet.com"
-                className="px-6 py-3 bg-white text-teal-600 rounded-lg border-2 border-teal-600 hover:bg-teal-50 transition-colors font-semibold"
-              >
-                Email Us
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <FaqClient />
+    </>
   );
 }
