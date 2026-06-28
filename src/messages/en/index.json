@@ -44,19 +44,131 @@
     "download": "Download Apps"
   },
   "hero": {
-    "badge": "Ethiopia's #1 Digital Logistics Platform",
+    "badge": "Ethiopia's Leading Digital Logistics Platform",
     "title": "Ethiopia's Digital Logistics Platform",
-    "subtitle": "Connecting Freight Owners and Drivers",
-    "description": "Revolutionizing freight transportation in Ethiopia through technology. Post loads, find trucks, and track deliveries in real-time.",
+    "title1": "Smarter Freight.",
+    "title2": "Connected Logistics.",
+    "subtitle": "Connecting Freight Owners, Drivers and Vehicle Owners",
+    "description": "Ethiochinet Logistics Technology operates a suite of three integrated apps — empowering freight owners, drivers, and vehicle owners across Ethiopia.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
-    "registerOwner": "Register as Freight Owner",
-    "registerDriver": "Register as Driver",
+    "downloadOnThe": "Download on the",
+    "getItOn": "Get it on",
+    "registerOwner": "Freight Owner",
+    "registerDriver": "Driver",
+    "registerVehicleOwner": "Vehicle Owner",
     "stats": {
       "drivers": "Registered Drivers",
       "freight": "Freight Posted",
-      "cities": "Cities Served"
+      "cities": "Cities Served",
+      "downloads": "App Downloads"
     }
+  },
+  "download": {
+    "pageTitle": "Download Our Apps",
+    "pageSubtitle": "Ethiochinet Logistics Technology operates a suite of three integrated applications. Choose the app that matches your role.",
+    "keyFeatures": "Key Features",
+    "downloadOnThe": "Download on the",
+    "getItOn": "Get it on",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "scanToDownload": "Scan to Download",
+    "scanSubtitle": "Scan a QR code directly from your phone camera",
+    "alreadyHaveApp": "Already have the app?",
+    "jumpIn": "Jump straight into your role on the platform.",
+    "freightOwner": {
+      "name": "Ethiochinet Freight Owner",
+      "subtitle": "For Freight Owners",
+      "features": {
+        "f1": "Register freight requirements digitally",
+        "f2": "Enter into digital transport agreements",
+        "f3": "Authorize commencement of transport",
+        "f4": "Track freight in transit in real-time",
+        "f5": "Confirm delivery upon completion"
+      },
+      "register": "Register as Freight Owner",
+      "label": "Freight Owner App"
+    },
+    "driver": {
+      "name": "Ethiochinet Driver",
+      "subtitle": "For Drivers",
+      "features": {
+        "f1": "Accept freight orders from owners",
+        "f2": "Top up digital wallet seamlessly",
+        "f3": "Enter digital agreements and sign off",
+        "f4": "Proceed to pickup and begin transport",
+        "f5": "Deliver freight and receive payment"
+      },
+      "register": "Register as Driver",
+      "label": "Driver App"
+    },
+    "vehicleOwner": {
+      "name": "Ethiochinet Vehicle Owner",
+      "subtitle": "For Vehicle Owners & Operators",
+      "features": {
+        "f1": "Register vehicle information and details",
+        "f2": "Assign qualified drivers to each vehicle",
+        "f3": "Monitor orders and agreements per vehicle",
+        "f4": "Track deliveries by plate number",
+        "f5": "Oversee driver performance and activity"
+      },
+      "register": "Register as Vehicle Owner",
+      "label": "Vehicle Owner App"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three integrated apps, one seamless logistics ecosystem",
+    "freightOwner": {
+      "title": "Freight Owner",
+      "step1Title": "Download App",
+      "step1Desc": "Get the Ethiochinet Freight Owner App from App Store or Google Play.",
+      "step2Title": "Register",
+      "step2Desc": "Create your account and register your freight requirements.",
+      "step3Title": "Enter Agreement",
+      "step3Desc": "Review and sign a digital agreement to authorize transport.",
+      "step4Title": "Authorize & Track",
+      "step4Desc": "Authorize transport commencement and track your freight in real-time.",
+      "step5Title": "Confirm Delivery",
+      "step5Desc": "Receive your freight and confirm delivery upon completion."
+    },
+    "driver": {
+      "title": "Driver",
+      "step1Title": "Download App",
+      "step1Desc": "Get the Ethiochinet Driver App from App Store or Google Play.",
+      "step2Title": "Top Up Wallet",
+      "step2Desc": "Add funds to your digital wallet to participate in the platform.",
+      "step3Title": "Accept & Agree",
+      "step3Desc": "Accept freight orders and enter into a digital agreement.",
+      "step4Title": "Load & Transport",
+      "step4Desc": "Proceed to the pickup location, load freight, and begin transport.",
+      "step5Title": "Deliver & Earn",
+      "step5Desc": "Deliver the freight, confirm completion, and receive payment."
+    },
+    "vehicleOwner": {
+      "title": "Vehicle Owner",
+      "step1Title": "Download App",
+      "step1Desc": "Get the Ethiochinet Vehicle Owner App from App Store or Google Play.",
+      "step2Title": "Register Vehicle",
+      "step2Desc": "Register your vehicle information including plate number and details.",
+      "step3Title": "Assign Driver",
+      "step3Desc": "Assign a qualified driver to operate your registered vehicle.",
+      "step4Title": "Monitor Operations",
+      "step4Desc": "Track orders, agreements, and deliveries linked to each vehicle.",
+      "step5Title": "Track by Plate",
+      "step5Desc": "Monitor all activity per vehicle by plate number in real-time."
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Logistics?",
+    "subtitle": "Join freight owners, drivers, and vehicle owners already using Ethiochinet across Ethiopia",
+    "downloadOnThe": "Download on the",
+    "getItOn": "Get it on",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "freightOwner": "Freight Owner",
+    "driver": "Driver",
+    "vehicleOwner": "Vehicle Owner"
   },
   "about": {
     "title": "About Ethiochinet",
@@ -110,22 +222,6 @@
       "description": "Access to a growing network of drivers across all major Ethiopian cities."
     }
   },
-  "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "Simple steps to start your logistics journey with Ethiochinet",
-    "forOwners": "For Freight Owners",
-    "forDrivers": "For Drivers",
-    "steps": {
-      "download": "Download App",
-      "register": "Register",
-      "post": "Post Freight",
-      "match": "Match with Drivers",
-      "track": "Track Delivery",
-      "browse": "Browse Freight",
-      "accept": "Accept Jobs",
-      "deliver": "Deliver & Earn"
-    }
-  },
   "testimonials": {
     "title": "What Our Customers Say",
     "subtitle": "Trusted by freight owners and drivers across Ethiopia"
@@ -157,7 +253,7 @@
     "clearFilters": "Clear filters"
   },
   "footer": {
-    "description": "Transforming Ethiopia's logistics through technology, connecting freight owners with drivers seamlessly across the nation.",
+    "description": "Transforming Ethiopia's logistics through technology, connecting freight owners, drivers, and vehicle owners seamlessly across the nation.",
     "company": "Company",
     "resources": "Resources",
     "legal": "Legal",
@@ -197,7 +293,4 @@
     "search": "Search...",
     "total": "Total"
   }
-  
-
-
 }

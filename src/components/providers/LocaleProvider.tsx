@@ -3,7 +3,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-type Locale = 'en' | 'am' | 'om';
+type Locale = 'en' | 'am' | 'om' | 'tg' | 'so';
 
 interface LocaleContextType {
   locale: Locale;
@@ -14,15 +14,18 @@ interface LocaleContextType {
 
 const LocaleContext = createContext<LocaleContextType | undefined>(undefined);
 
-// Import translations
 import enTranslations from '@/messages/en/index.json';
 import amTranslations from '@/messages/am/index.json';
 import omTranslations from '@/messages/om/index.json';
+import tgTranslations from '@/messages/tg/index.json';
+import soTranslations from '@/messages/so/index.json';
 
 const translationsMap = {
   en: enTranslations,
   am: amTranslations,
   om: omTranslations,
+  tg: tgTranslations,
+  so: soTranslations,
 };
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
@@ -31,7 +34,6 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
   useEffect(() => {
-    // Load saved locale from localStorage
     const savedLocale = localStorage.getItem('locale') as Locale;
     if (savedLocale && translationsMap[savedLocale]) {
       setLocale(savedLocale);
@@ -45,26 +47,31 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
     setTranslations(translationsMap[newLocale]);
     localStorage.setItem('locale', newLocale);
     document.documentElement.lang = newLocale;
-    
-    // Refresh the page to update all content
     router.refresh();
   };
 
-  // Translation function
   const t = (key: string): string => {
     const keys = key.split('.');
     let value: any = translations;
-    
+
     for (const k of keys) {
-      if (value && value[k]) {
+      if (value && value[k] !== undefined) {
         value = value[k];
       } else {
-        console.warn(`Translation key not found: ${key}`);
-        return key;
+        // Fall back to English
+        let fallback: any = enTranslations;
+        for (const fk of keys) {
+          if (fallback && fallback[fk] !== undefined) {
+            fallback = fallback[fk];
+          } else {
+            return key;
+          }
+        }
+        return typeof fallback === 'string' ? fallback : key;
       }
     }
-    
-    return value;
+
+    return typeof value === 'string' ? value : key;
   };
 
   return (

@@ -40,7 +40,7 @@ export default function FAQSection() {
         id: doc.id,
         ...doc.data()
       })) as FAQ[];
-      
+
       setFaqs(faqsData);
       setFilteredFaqs(faqsData);
     } catch (error) {
