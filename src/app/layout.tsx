@@ -77,11 +77,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico' },
+      { url: '/favicon.png', type: 'image/png' },
       { url: '/images/ethiochinet_logo-transparent.png', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico',
-    apple: '/images/ethiochinet_logo-transparent.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
   verification: {
     google: 'YOUR_GOOGLE_SITE_VERIFICATION',
