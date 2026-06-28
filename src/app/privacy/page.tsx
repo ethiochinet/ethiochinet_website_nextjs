@@ -89,11 +89,13 @@ export default function PrivacyPolicyPage() {
               <p className="text-gray-700">
                 If you have questions about this Privacy Policy, please contact us at:
                 <br />
-                Email: privacy@ethiochinet.com
+                Email: info@ethiochinet.com
                 <br />
-                Phone: +251 911 234 567
+                Phone: +251 903 77 99 55
                 <br />
-                Address: Bole Road, Zequala Complex, 4th Floor, Addis Ababa, Ethiopia
+                Address: Bole , Gerji Mebrat Hail<br />
+                2nd Floor, Office 107<br />
+                Addis Ababa, Ethiopia
               </p>
             </section>
           </div>

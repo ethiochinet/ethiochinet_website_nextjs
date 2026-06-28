@@ -1,0 +1,63 @@
+{
+  "header": {
+    "home": "ገዝነት",
+    "aboutUs": "ብዛዕባና",
+    "guidelines": "መምርሒታት",
+    "contactUs": "ራኸቡና",
+    "dashboard": "ዳሽቦርድ",
+    "addChallenge": "ፈተና ወስኽ",
+    "manageTestimonials": "ምስክርነታት ኣመሓድር",
+    "logout": "ውጻ",
+    "tiktokChallengeHub": "ቲክቶክ ፈተና ማእከል"
+  },
+  "hero": {
+    "createParticipateWin": "ፍጠር፣ ተሳተፍ፣ ከምኡውን",
+    "winAmazingPrizes": "ዘደንቕ ሽልማታት ኣሸንፍ!",
+    "description": "ንቲክቶክ ፈተናታት ዝተዳለወ መድረኽ። ፈጣሪ ይኹን ተሳታፊ፣ ክእለትካ ኣርእይ ከምኡውን ምስ ምርጻት ተወዳደር!",
+    "getStartedFree": "ብነጻ ጀምር",
+    "createYourChallenge": "ፈተናኻ ፍጠር",
+    "browseChallenges": "ፈተናታት ርአ",
+    "exploreChallenges": "ፈተናታት ርአ",
+    "postYourVideos": "ቪድዮታትካ ልጠፍ",
+    "joinCommunities": "ማሕበረሰባት ተቀላቀል",
+    "winExcitingPrizes": "ኣስደሳቕ ሽልማታት ኣሸንፍ"
+  },
+  "footer": {
+    "quickLinks": "ቅልጡፍ መስገዲታት",
+    "contactInfo": "ናይ ርክብ ሓበሬታ",
+    "followUs": "ተኸተሉና",
+    "termsOfService": "ውሎት ኣገልግሎት",
+    "privacyPolicy": "ፖሊሲ ምስጢር",
+    "allRightsReserved": "ኩሉ መሰል ተዓቂቡ ኣሎ",
+    "madeWith": "ተሰሪሑ ብ",
+    "forCreators": "ንፈጣሪታት ቲክቶክ ምሉእ ዓለም"
+  },
+  "common": {
+    "selectLanguage": "ቋንቋ ምረጽ",
+    "loading": "ይጽዕን ኣሎ...",
+    "error": "ጌጋ",
+    "retry": "ደጊምካ ፈትን",
+    "save": "ዓቅም",
+    "cancel": "ኣትርፍ",
+    "delete": "ሰርዝ",
+    "edit": "ኣርትዕ",
+    "view": "ርአ",
+    "submit": "ኣስምር",
+    "search": "ድለይ",
+    "back": "ተመለስ",
+    "next": "ዝቕጽል",
+    "previous": "ዝሓለፈ"
+  },
+  "auth": {
+    "signIn": "እቶ",
+    "signUp": "ተመዝገብ",
+    "signOut": "ውጻ",
+    "signInWithGoogle": "ብGoogle እቶ",
+    "welcomeBack": "እንቋዕ ብደሓን ተመሊስካ",
+    "selectUserType": "ከመይ ጌርካ ምጥቃም ከምትደሊ ምረጽ",
+    "iAmParticipant": "ተሳታፊ እየ",
+    "iAmCreator": "ፈጣሪ ፈተና እየ",
+    "participantDesc": "ተሳተፍ ፈተናታት ከምኡውን ክእለትካ ኣርእይ",
+    "creatorDesc": "ፍጠር ፈተናታት ከምኡውን ኣመሓድር ተሳተፍቲ"
+  }
+}

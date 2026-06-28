@@ -1,15 +1,17 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
   images: {
-    domains: ['firebasestorage.googleapis.com'],
-    unoptimized: true, // For Firebase Hosting
-  },
-  eslint: {
-    ignoreDuringBuilds: true, // Optional for development
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'firebasestorage.googleapis.com',
+      },
+    ],
   },
   typescript: {
-    ignoreBuildErrors: true, // Optional for development
+    ignoreBuildErrors: true,
   },
-}
+};
 
-module.exports = nextConfig
+export default nextConfig;

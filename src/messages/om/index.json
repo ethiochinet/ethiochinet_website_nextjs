@@ -1,0 +1,296 @@
+{
+  "common": {
+    "home": "Mana",
+    "about": "Waa'ee",
+    "blog": "Blog",
+    "careers": "Hojii",
+    "investment": "Maallaqaa",
+    "contact": "Quunnamti",
+    "faq": "Gaaffiiwwan",
+    "download": "Buufadhu",
+    "register": "Galmaa'i",
+    "signIn": "Seeni",
+    "logout": "Ba'i",
+    "loading": "Fe'aa...",
+    "error": "Dogoggora",
+    "success": "Milkaa'ina",
+    "save": "Olkaa'i",
+    "cancel": "Haqi",
+    "delete": "Haqi",
+    "edit": "Gulaali",
+    "view": "Ilaali",
+    "back": "Duubatti",
+    "search": "Barbaadi",
+    "filter": "Calalabi",
+    "all": "Hunda",
+    "readMore": "Dubbisi",
+    "learnMore": "Baradhu",
+    "getStarted": "Jalqabi",
+    "contactUs": "Nu qunnami",
+    "subscribe": "Miseensa ta'i",
+    "submit": "Ergi",
+    "send": "Ergi",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "navigation": {
+    "home": "Mana",
+    "about": "Waa'ee Keenya",
+    "blog": "Blog",
+    "careers": "Carraalee Hojii",
+    "investment": "Maallaqaa",
+    "contact": "Nu qunnami",
+    "faq": "Gaaffiiwwan Baayyan",
+    "download": "Appii Buufadhu"
+  },
+  "hero": {
+    "badge": "Marsaa Lojistikii Dijitaalaa Eessumma Itoophiyaa",
+    "title": "Marsaa Lojistikii Dijitaalaa Itoophiyaa",
+    "title1": "Fe'aa Qara.",
+    "title2": "Lojistikii Walitti Hidhamaan.",
+    "subtitle": "Abbootii Fe'aa, Konkolaachistoota fi Abbootii Konkolaataa Walitti Hidha",
+    "description": "Ethiochinet Logistics Technology appii sadii walitti hidhamanii qaba — abbootii fe'aa, konkolaachistoota, fi abbootii konkolaataa Itoophiyaa guutuu beeksisa.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "downloadOnThe": "Buufadhu irraa",
+    "getItOn": "Argadhu irraa",
+    "registerOwner": "Abbaa Fe'aa",
+    "registerDriver": "Konkolaachisaa",
+    "registerVehicleOwner": "Abbaa Konkolaataa",
+    "stats": {
+      "drivers": "Konkolaachistoota Galmaa'an",
+      "freight": "Fe'aa Galfame",
+      "cities": "Magaaloota Tajaajilaman",
+      "downloads": "Buufannoo Appii"
+    }
+  },
+  "download": {
+    "pageTitle": "Appii Keenya Buufadhu",
+    "pageSubtitle": "Ethiochinet Logistics Technology appii sadii walitti hidhamanii qaba. Gahee keetiif mijaa'u filadhu.",
+    "keyFeatures": "Amaloota Ijoo",
+    "downloadOnThe": "Buufadhu irraa",
+    "getItOn": "Argadhu irraa",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "scanToDownload": "Scan Godhuun Buufadhu",
+    "scanSubtitle": "QR code kaameeraa bilbila keetiin scan godhi",
+    "alreadyHaveApp": "Appii qabdaa?",
+    "jumpIn": "Gahee keetiif qaxxaamuri.",
+    "freightOwner": {
+      "name": "Ethiochinet Freight Owner",
+      "subtitle": "Abbootii Fe'aa",
+      "features": {
+        "f1": "Gaaffii fe'aa dijitaalidhaan galmeessi",
+        "f2": "Waliigaltee konveyaansii dijitaalaa kaa'i",
+        "f3": "Jalqabbii konveyaansii hayyami",
+        "f4": "Fe'aa yeroo haarawa hordofi",
+        "f5": "Gahiinsa yoo xumurame mirkaneessi"
+      },
+      "register": "Abbaa Fe'aa Ta'uuf Galmaa'i",
+      "label": "Appii Abbaa Fe'aa"
+    },
+    "driver": {
+      "name": "Ethiochinet Driver",
+      "subtitle": "Konkolaachistoota",
+      "features": {
+        "f1": "Ajajawwan fe'aa abbootii irraa fudhadhu",
+        "f2": "Hordaa dijitaalaa guuti",
+        "f3": "Waliigaltee dijitaalaa mallatteessi",
+        "f4": "Gara bakka itti fuufamu deemi fe'aa jalqabi",
+        "f5": "Fe'aa gahisi kaffaltii fudhadhu"
+      },
+      "register": "Konkolaachisaa Ta'uuf Galmaa'i",
+      "label": "Appii Konkolaachisaa"
+    },
+    "vehicleOwner": {
+      "name": "Ethiochinet Vehicle Owner",
+      "subtitle": "Abbootii Konkolaataa fi Hojettoota",
+      "features": {
+        "f1": "Odeeffannoo konkolaataa galmeessi",
+        "f2": "Konkolaachistoota naannoo konkolaataa hundaaf ramadi",
+        "f3": "Ajajawwan fi waliigalteewwan hordofi",
+        "f4": "Gahiinsa lakkoobsa mallattoodhaan hordofi",
+        "f5": "Hojii konkolaachistoota to'adi"
+      },
+      "register": "Abbaa Konkolaataa Ta'uuf Galmaa'i",
+      "label": "Appii Abbaa Konkolaataa"
+    }
+  },
+  "howItWorks": {
+    "title": "Akkamitti Hojjeta",
+    "subtitle": "Appii sadii walitti hidhamanii, sirna lojistikii tokko",
+    "freightOwner": {
+      "title": "Abbaa Fe'aa",
+      "step1Title": "Appii Buufadhu",
+      "step1Desc": "Ethiochinet Freight Owner App Store ykn Google Play irraa buufadhu.",
+      "step2Title": "Galmaa'i",
+      "step2Desc": "Herrega kee hoji'i gaaffii fe'aas galmeessi.",
+      "step3Title": "Waliigaltee Kaa'i",
+      "step3Desc": "Waliigaltee dijitaalaa dubbisi fi mallatteessi.",
+      "step4Title": "Hayyami fi Hordofi",
+      "step4Desc": "Jalqabbii konveyaansii hayyami fe'aas yeroo haarawa hordofi.",
+      "step5Title": "Gahiinsa Mirkaneessi",
+      "step5Desc": "Fe'aa fudhadhu yoo xumurame gahiinsa mirkaneessi."
+    },
+    "driver": {
+      "title": "Konkolaachisaa",
+      "step1Title": "Appii Buufadhu",
+      "step1Desc": "Ethiochinet Driver App Store ykn Google Play irraa buufadhu.",
+      "step2Title": "Hordaa Guuti",
+      "step2Desc": "Hordaa dijitaalaa kee guuti.",
+      "step3Title": "Fudhadhu fi Mallatteessi",
+      "step3Desc": "Ajajawwan fe'aa fudhadhu waliigaltee dijitaalaas mallatteessi.",
+      "step4Title": "Fe'i fi Geeddarsi",
+      "step4Desc": "Gara bakka fe'iitti deemi fe'aa fe'i konveyaansii jalqabi.",
+      "step5Title": "Gahisi fi Argadhu",
+      "step5Desc": "Fe'aa gahisi xumurama mirkaneessi kaffaltii fudhadhu."
+    },
+    "vehicleOwner": {
+      "title": "Abbaa Konkolaataa",
+      "step1Title": "Appii Buufadhu",
+      "step1Desc": "Ethiochinet Vehicle Owner App Store ykn Google Play irraa buufadhu.",
+      "step2Title": "Konkolaataa Galmeessi",
+      "step2Desc": "Odeeffannoo konkolaataa lakkoobsa mallattoos galmeessi.",
+      "step3Title": "Konkolaachisaa Ramadi",
+      "step3Desc": "Konkolaachisaa naannoo konkolaataa galme'eef ramadi.",
+      "step4Title": "Hojiilee Hordofi",
+      "step4Desc": "Ajajawwan, waliigalteelee, fi gahiinsa konkolaataa hundaaf hordofi.",
+      "step5Title": "Mallattootti Hordofi",
+      "step5Desc": "Hojiilee konkolaataa hundaa lakkoobsa mallattootti hordofi."
+    }
+  },
+  "cta": {
+    "title": "Lojistikii Kee Jijjiiruuf Qophaa'aa?",
+    "subtitle": "Abbootii fe'aa, konkolaachistoota, fi abbootii konkolaataa Ethiochinet fayyadaman waliin makkami",
+    "downloadOnThe": "Buufadhu irraa",
+    "getItOn": "Argadhu irraa",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "freightOwner": "Abbaa Fe'aa",
+    "driver": "Konkolaachisaa",
+    "vehicleOwner": "Abbaa Konkolaataa"
+  },
+  "about": {
+    "title": "Waa'ee Ethiochinet",
+    "mission": {
+      "title": "Kaayyoo Keenya",
+      "description": "Lafeessa lojistikii Itoophiyaa marsaa dijitaalaa sirriitti walitti hidhuu abdii qabu uumuun abbootii fe'aa fi konkolaachistoota walitti hidhuun konveyaansii gorfachaa, ifaa fi hunda danda'ama godhuu."
+    },
+    "vision": {
+      "title": "Mul'ata Keenya",
+      "description": "Marsaa lojistikii dijitaalaa Itoophiyaa keessatti dhuftee caalmaa argachuu, daldala fi konkolaachistoota dabalaa guddina diinagdee biyyatti gargaaruun."
+    },
+    "story": {
+      "title": "Seenaa Keenya",
+      "description": "Ethiochinet miira salphaa irraa dhalate: lafeessa lojistikii Itoophiyaa faffacaa'a, hin hojjetne, ifummaa dhabeessa ture. Bara 2023, gareen bu'uraa keenya qarqara kana guutuuf tokkoomte."
+    },
+    "values": {
+      "title": "Gatiilee Ijoo Keenya",
+      "trust": "Amantaa fi Ifummaa",
+      "innovation": "Haaromsa Jalqabaa",
+      "customer": "Gaaffii Maamilaa",
+      "impact": "Dhiibbaa Naannoo",
+      "efficiency": "Gorfaa'ummaa",
+      "community": "Hawaasummaa"
+    }
+  },
+  "features": {
+    "title": "Amaloota Marsaa",
+    "subtitle": "Hojii lojistikii kee sirriitti bulchuuf barbaachisu hundaa",
+    "smartMatching": {
+      "title": "Fe'aa Wal Dabarsuun Qaraa",
+      "description": "Formulaa AI yeroo haarawa fe'aa kee konkolaachistoota isa caalmaa waliin wal qabiisisan."
+    },
+    "verifiedDrivers": {
+      "title": "Konkolaachistoota Mirkana'an",
+      "description": "Konkolaachistoota hundi tasgabbii keetiif mirkannaa ga'aa ta'oo darbatu."
+    },
+    "notifications": {
+      "title": "Beeksisa Yeroo Haarawa",
+      "description": "Haalota fe'aa, bakka konkolaachistootaa, fi mirkannaa gahiinsa irratti beeksisota yeroo hatattamaa."
+    },
+    "secure": {
+      "title": "Marsaa Nageenya Qabu",
+      "description": "Raawwii marsaa to'ataame fi kaffaltiiwwan nageenyan hojjataman."
+    },
+    "pricing": {
+      "title": "Gatii Ifaa",
+      "description": "Gatii ifaa kallattiitti kanneen kaffaltii dhokataa tokko malee."
+    },
+    "network": {
+      "title": "Tarree Biyyaalessaa",
+      "description": "Tarree konkolaachistoota guddinaa magaaloota guguddaa Itoophiyaa hunda keessa jiru argachuuf."
+    }
+  },
+  "testimonials": {
+    "title": "Maamiloonni Keenya Maal Jedhan",
+    "subtitle": "Abbootii fe'aa fi konkolaachistoota Itoophiyaa guutuu irratti amanama"
+  },
+  "partners": {
+    "title": "Hiriyoota fi Deeggartootaa Keenya",
+    "subtitle": "Bulchiinsa lojistikii Itoophiyaa jijjiiruuf hoggantoota industirii waliin hojjechuun",
+    "trustedBy": "Hoggantoota industirii irratti amanama"
+  },
+  "blog": {
+    "title": "Blog fi Oduu",
+    "subtitle": "Ethiochinet fi industirii lojistikii irraa yaadotaa fi haaromsa",
+    "readMore": "Dubbisi",
+    "viewAll": "Barreeffamoota Hundaa Ilaali",
+    "categories": {
+      "technology": "Teeknoloojii Lojistikii",
+      "updates": "Haaromsa Jalqabaa",
+      "industry": "Industirii Fe'aa",
+      "economy": "Diinagdee Itoophiyaa"
+    }
+  },
+  "faq": {
+    "title": "Gaaffiiwwan Baay'inaan Gaafataman",
+    "subtitle": "Deebii gaaffiiwwan waliigalaa Ethiochinet irratti argadhu",
+    "search": "Gaaffiiwwan barbaadi...",
+    "stillHaveQuestions": "Gaaffii Ammallee Qabdaa?",
+    "contactSupport": "Deeggarsa Quunnamti",
+    "noResults": "Gaaffiiwwan hin argamne",
+    "clearFilters": "Sisalloo haqi"
+  },
+  "footer": {
+    "description": "Lojistikii Itoophiyaa teeknoloojiidhaan jijjiiruun abbootii fe'aa, konkolaachistoota, fi abbootii konkolaataa biyyatti guutuu walitti hidha.",
+    "company": "Dhaabbata",
+    "resources": "Qabeenya",
+    "legal": "Seeraan",
+    "connect": "Nuun Wal Qunnamaa",
+    "stayUpdated": "Haaromfamaa",
+    "subscribe": "Miseensa ta'i",
+    "emailPlaceholder": "Imeelii kee galchi",
+    "privacy": "Imaama Dhuunfaa",
+    "terms": "Haalota Tajaajilaa",
+    "cookies": "Imaama Cookie",
+    "sitemap": "Kaartaa Marsaa",
+    "rights": "Mirga hundi kan eegame.",
+    "downloadApps": "Appii keenya buufadhu"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "login": "Seensa Bulchiinsaa",
+    "logout": "Ba'i",
+    "welcome": "Gara dashboard bulchiinsa keetitti baga nagaan dhufte",
+    "blog": "Barreeffamoota Blog",
+    "jobs": "Carraalee Hojii",
+    "investments": "Maallaqaa",
+    "contacts": "Ergaawwan Quunnamtii",
+    "partners": "Hiriyoota",
+    "testimonials": "Ragaalee",
+    "faqs": "FAQs",
+    "statistics": "Lakkoofsa",
+    "subscriptions": "Miseensummaa",
+    "applicants": "Iyyattoota",
+    "new": "Haaraa",
+    "edit": "Gulaali",
+    "delete": "Haqi",
+    "save": "Olkaa'i",
+    "cancel": "Haqi",
+    "status": "Haala",
+    "actions": "Tarkaanfiiwwan",
+    "search": "Barbaadi...",
+    "total": "Walii Galaa"
+  }
+}

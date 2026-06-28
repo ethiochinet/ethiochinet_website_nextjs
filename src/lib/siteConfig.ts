@@ -1,0 +1,73 @@
+export const siteConfig = {
+  name: 'Ethiochinet',
+  company: 'Ethiochinet Logistics Technology',
+  url: 'https://ethiochinet.com',
+  description:
+    "Ethiopia's leading digital freight logistics platform with three integrated apps — Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner. Post freight, track deliveries in real-time, and manage your fleet seamlessly.",
+  keywords: [
+    'logistics Ethiopia',
+    'freight platform Ethiopia',
+    'digital freight matching Ethiopia',
+    'truck booking Ethiopia',
+    'cargo tracking Ethiopia',
+    'Ethiochinet',
+    'freight owner app Ethiopia',
+    'driver app Ethiopia',
+    'vehicle owner app Ethiopia',
+    'Addis Ababa logistics',
+    'Ethiopian logistics technology',
+    'Djibouti-Addis corridor freight',
+    'freight transport Ethiopia',
+    'empty backhaul reduction Ethiopia',
+    'digital agreements freight Ethiopia',
+  ],
+  ogImage: '/images/og-image.png',
+  logoImage: '/images/ethiochinet_logo-transparent.png',
+  twitterHandle: '@ethiochinet',
+  email: 'info@ethiochinet.com',
+  phone: '+251903779955',
+  phone2: '+251970555577',
+  foundingDate: '2023',
+  address: {
+    street: 'Bole, Gerji Mebrat Hail, 2nd Floor, Office 107',
+    city: 'Addis Ababa',
+    country: 'Ethiopia',
+    countryCode: 'ET',
+  },
+  geo: {
+    latitude: 9.0108,
+    longitude: 38.7578,
+  },
+  social: {
+    facebook: 'https://facebook.com/ethiochinets',
+    twitter: 'https://twitter.com/ethiochinet',
+    linkedin: 'https://linkedin.com/company/ethiochinet',
+    instagram: 'https://instagram.com/ethiochinet',
+    telegram: 'https://t.me/ethiochinet_logistics',
+    youtube: 'https://www.youtube.com/@ethiochinetlogistics',
+    tiktok: 'https://tiktok.com/@ethiochinet',
+  },
+  apps: {
+    freightOwner: {
+      name: 'Ethiochinet Freight Owner',
+      appStore: 'https://apps.apple.com/us/app/ethiochinet-owner/id6741787980',
+      googlePlay: 'https://play.google.com/store/apps/details?id=com.ethiochinet.ethiochinet',
+      appStoreId: 'id6741787980',
+      bundleId: 'com.ethiochinet.ethiochinet',
+    },
+    driver: {
+      name: 'Ethiochinet Driver',
+      appStore: 'https://apps.apple.com/us/app/ethiochinet-driver/id6741788154',
+      googlePlay: 'https://play.google.com/store/apps/details?id=com.ethiochinet.ethiochinet_driver',
+      appStoreId: 'id6741788154',
+      bundleId: 'com.ethiochinet.ethiochinet_driver',
+    },
+    vehicleOwner: {
+      name: 'Ethiochinet Vehicle Owner',
+      appStore: '#',
+      googlePlay: '#',
+    },
+  },
+} as const;
+
+export type SiteConfig = typeof siteConfig;

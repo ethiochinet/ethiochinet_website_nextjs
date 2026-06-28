@@ -1,0 +1,296 @@
+{
+  "common": {
+    "home": "Bogga Hore",
+    "about": "Nagu Saabsan",
+    "blog": "Blog",
+    "careers": "Xirfadaha",
+    "investment": "Maalgashiga",
+    "contact": "Nala Soo Xiriir",
+    "faq": "Su'aalaha Badanaa",
+    "download": "Soo Degso",
+    "register": "Isdiiwaangeli",
+    "signIn": "Gal",
+    "logout": "Ka Bax",
+    "loading": "Waa la raraa...",
+    "error": "Khalad",
+    "success": "Guul",
+    "save": "Keydi",
+    "cancel": "Jooji",
+    "delete": "Tirtir",
+    "edit": "Wax Ka Beddel",
+    "view": "Fiiri",
+    "back": "Ku Noqo",
+    "search": "Raadi",
+    "filter": "Shaandheey",
+    "all": "Dhammaan",
+    "readMore": "Wax Badan Akhri",
+    "learnMore": "Wax Badan Baaro",
+    "getStarted": "Bilow",
+    "contactUs": "Nala Soo Xiriir",
+    "subscribe": "Isdiiwaangeli",
+    "submit": "Gudbi",
+    "send": "Dir",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "navigation": {
+    "home": "Bogga Hore",
+    "about": "Nagu Saabsan",
+    "blog": "Blog",
+    "careers": "Fursadaha Shaqada",
+    "investment": "Maalgashiga",
+    "contact": "Nala Soo Xiriir",
+    "faq": "Su'aalaha Badanaa",
+    "download": "Soo Degso Apps-ka"
+  },
+  "hero": {
+    "badge": "Saftiinta Xiddigta ah ee Dijitaalka Logistics Itoobiya",
+    "title": "Madasha Dijitaalka Logistics Itoobiya",
+    "title1": "Xamuul Casri ah.",
+    "title2": "Logistics La Xidid ah.",
+    "subtitle": "Isku Xidis Milkiilayaasha Xamuulka, Darawallada iyo Milkiilayaasha Baabuurta",
+    "description": "Ethiochinet Logistics Technology waxay shaqeysiisaa saddex barnaamij is-xidid — oo awood siiya milkiilayaasha xamuulka, darawallada, iyo milkiilayaasha baabuurta ee Itoobiya.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "downloadOnThe": "Ka Soo Degso",
+    "getItOn": "Ka Hel",
+    "registerOwner": "Milkiilaha Xamuulka",
+    "registerDriver": "Darawal",
+    "registerVehicleOwner": "Milkiilaha Baabuurka",
+    "stats": {
+      "drivers": "Darawallada La Diiwaangeliyey",
+      "freight": "Xamuulka La Duubay",
+      "cities": "Magaalooyinka La Adeegay",
+      "downloads": "Soo Dejiisashada App"
+    }
+  },
+  "download": {
+    "pageTitle": "Soo Degso Apps-keenna",
+    "pageSubtitle": "Ethiochinet Logistics Technology waxay shaqeysiisaa saddex barnaamij is-xidid. Dooro barnaamijka doorashada aad tahay.",
+    "keyFeatures": "Astaamaha Muhiimka ah",
+    "downloadOnThe": "Ka Soo Degso",
+    "getItOn": "Ka Hel",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "scanToDownload": "Scan Garee oo Soo Degso",
+    "scanSubtitle": "QR-code kaameerada telefoonkaaga ku scan gareey",
+    "alreadyHaveApp": "Ma haysataa App-ka?",
+    "jumpIn": "Si toos ah u gal doorashada aad tahay.",
+    "freightOwner": {
+      "name": "Ethiochinet Freight Owner",
+      "subtitle": "Milkiilayaasha Xamuulka",
+      "features": {
+        "f1": "Diiwaangeli baahida xamuulka si dijitaal ah",
+        "f2": "Saxiix heshiisyada gaarida dijitaalka ah",
+        "f3": "Oggolow bilaabista gaarista",
+        "f4": "La soco xamuulka socdaalka ah wakhtiga dhabta ah",
+        "f5": "Xaqiiji gaarsiinta markii la dhammaystiro"
+      },
+      "register": "Isdiiwaangeli Milkiilaha Xamuulka",
+      "label": "App Milkiilaha Xamuulka"
+    },
+    "driver": {
+      "name": "Ethiochinet Driver",
+      "subtitle": "Darawallada",
+      "features": {
+        "f1": "Aqbal amarrada xamuulka ee milkiilayaasha",
+        "f2": "Buuxi jeebka dijitaalka si fudud",
+        "f3": "Saxiix heshiisyada dijitaalka",
+        "f4": "Tag goobta qaadista oo bilow gaarida",
+        "f5": "Gaarsi xamuulka oo hel lacag-bixinta"
+      },
+      "register": "Isdiiwaangeli Darawal",
+      "label": "App Darawallada"
+    },
+    "vehicleOwner": {
+      "name": "Ethiochinet Vehicle Owner",
+      "subtitle": "Milkiilayaasha Baabuurta iyo Hawl-galiyaasha",
+      "features": {
+        "f1": "Diiwaangeli macluumaadka baabuurka",
+        "f2": "U magac-abus darawallada xirfadlayaasha ah",
+        "f3": "La soco amarrada iyo heshiisyada baabuur kasta",
+        "f4": "Raadi gaarsiimaha lambarka lookhada",
+        "f5": "Kormeer hawsha darawallada"
+      },
+      "register": "Isdiiwaangeli Milkiilaha Baabuurka",
+      "label": "App Milkiilaha Baabuurka"
+    }
+  },
+  "howItWorks": {
+    "title": "Sida ay u Shaqeyso",
+    "subtitle": "Saddex barnaamij is-xidid, hal nidaam logistics ah",
+    "freightOwner": {
+      "title": "Milkiilaha Xamuulka",
+      "step1Title": "Soo Degso App-ka",
+      "step1Desc": "Ethiochinet Freight Owner App Store ama Google Play ka soo degso.",
+      "step2Title": "Isdiiwaangeli",
+      "step2Desc": "Akoon fur baahidaada xamuulkana galiso.",
+      "step3Title": "Saxiix Heshiiska",
+      "step3Desc": "Heshiis dijitaal ah akhri saxiix gaarida oggolow.",
+      "step4Title": "Oggolow iyo La Soco",
+      "step4Desc": "Bilaabista gaarida oggolow xamuulkaagana si toos ah la soco.",
+      "step5Title": "Xaqiiji Gaarsiinta",
+      "step5Desc": "Xamuulka qaado markii la dhammaystirona gaarsiinta xaqiiji."
+    },
+    "driver": {
+      "title": "Darawal",
+      "step1Title": "Soo Degso App-ka",
+      "step1Desc": "Ethiochinet Driver App Store ama Google Play ka soo degso.",
+      "step2Title": "Buuxi Jeebka",
+      "step2Desc": "Jeebka dijitaalka buuxi si aad ugu qayb qaadato madasha.",
+      "step3Title": "Aqbal iyo Saxiix",
+      "step3Desc": "Amarrada xamuulka aqbal heshiis dijitaalna saxiix.",
+      "step4Title": "Soo Qaad iyo Gaar",
+      "step4Desc": "Goobta qaadista tag xamuulka soo qaad gaarida bilow.",
+      "step5Title": "Gaarsi iyo Hel",
+      "step5Desc": "Xamuulka gaarsi dhammaadka xaqiiji lacag-bixintana qaado."
+    },
+    "vehicleOwner": {
+      "title": "Milkiilaha Baabuurka",
+      "step1Title": "Soo Degso App-ka",
+      "step1Desc": "Ethiochinet Vehicle Owner App Store ama Google Play ka soo degso.",
+      "step2Title": "Diiwaangeli Baabuurka",
+      "step2Desc": "Macluumaadka baabuurka oo lambarka lookhada ku jira galiso.",
+      "step3Title": "Magac-abus Darawal",
+      "step3Desc": "Darawal xirfadlaha ah u magac-abus baabuurka diiwaangeliyey.",
+      "step4Title": "Kormeer Hawlaha",
+      "step4Desc": "Amarrada heshiisyada gaarsiimaha baabuur kasta la soco.",
+      "step5Title": "La Soco Lookhada",
+      "step5Desc": "Dhammaan hawlaha baabuurka lambarka lookhada la soco si toos ah."
+    }
+  },
+  "cta": {
+    "title": "Ma diyaar baad u tahay inaad logistics-kaaga beddesho?",
+    "subtitle": "Ku biir milkiilayaasha xamuulka, darawallada, iyo milkiilayaasha baabuurta ee Ethiochinet isticmaalaya Itoobiya",
+    "downloadOnThe": "Ka Soo Degso",
+    "getItOn": "Ka Hel",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "freightOwner": "Milkiilaha Xamuulka",
+    "driver": "Darawal",
+    "vehicleOwner": "Milkiilaha Baabuurka"
+  },
+  "about": {
+    "title": "Nagu Saabsan Ethiochinet",
+    "mission": {
+      "title": "Hadafkayaga",
+      "description": "Inaan warshadda logistics Itoobiya u beddelno marsad dijitaal ah oo xidha milkiilayaasha xamuulka iyo darawallada, gaarsiinta ku dhiga mid hufan, cad oo dhammaan heli karo."
+    },
+    "vision": {
+      "title": "Aragtidayada",
+      "description": "Inaan noqono marsadda logistics dijitaalka ee ugu aaminsan Itoobiya, adeegsiga ganacsiyada iyo darawallada si loogu gaarsiiyo koboca dhaqaalaha qaran."
+    },
+    "story": {
+      "title": "Sheekadayada",
+      "description": "Ethiochinet waxay ka dhalatay indho la eegay: warshadda logistics Itoobiya waxay ahayd mid kala firirsan, wax-la-qabsi la'aanta, caddaansanaanta la'aanta. Sanadkii 2023, kooxda aasaasayaasha ah ayaa isu timid si ay xalkan u xalliyaan."
+    },
+    "values": {
+      "title": "Qiimayaashayada Aasaasiga ah",
+      "trust": "Aaminaad iyo Cadaaladnimo",
+      "innovation": "Hal-abuur Marka Hore",
+      "customer": "Daryeelka Macmiilka",
+      "impact": "Saamaynta Maxaliga ah",
+      "efficiency": "Hufnaanta",
+      "community": "Bulsho"
+    }
+  },
+  "features": {
+    "title": "Astaamaha Madasha",
+    "subtitle": "Dhammaan waxaad u baahantahay si aad u maamusho hawlaha logistics-kaaga si hufan",
+    "smartMatching": {
+      "title": "Wax-qabadka Casriga ah ee Xamuulka",
+      "description": "Al-gorithmka AI ah wuxuu xamuulkaaga la waafajiyaa darawallada ugu habboon si toos ah."
+    },
+    "verifiedDrivers": {
+      "title": "Darawallada La Xaqiijiyey",
+      "description": "Darawallada oo dhammu waxay maraan xaqiijin buuxda si ay kuu siiyaan nabad-gelyada."
+    },
+    "notifications": {
+      "title": "Ogeysiisyada Si Toos ah",
+      "description": "Xog cusub oo degdeg ah oo ku saabsan xaaladda xamuulkaaga, goobta darawalkii, iyo xaqiijinta gaarsiinta."
+    },
+    "secure": {
+      "title": "Marsad Ammaan ah",
+      "description": "Macaamiilada xididan dhinacba oo la xidid kuna shaqeeya lacag-bixinta ammaan ah."
+    },
+    "pricing": {
+      "title": "Qiimaha Cad",
+      "description": "Qiimaha cad oo hore looga ogaaday iyada oo lacagaha qarsoon la'aanta."
+    },
+    "network": {
+      "title": "Shabakadda Qaranka",
+      "description": "Hel shabakad kobocaysa oo ah darawallada ku nool magaalooyinka ugu weyn Itoobiya."
+    }
+  },
+  "testimonials": {
+    "title": "Macaamilkayagu Maxay Yidhaahdaan",
+    "subtitle": "Lagu aaminsan yahay milkiilayaasha xamuulka iyo darawallada Itoobiya oo dhan"
+  },
+  "partners": {
+    "title": "Asxaabtayada iyo Garabsadayaasha",
+    "subtitle": "Waxaan la shaqeynaa hoggaamiyayaasha warshadda si lougu beddelno logistics Itoobiya",
+    "trustedBy": "Lagu aaminsan yahay hoggaamiyayaasha warshadda"
+  },
+  "blog": {
+    "title": "Blog iyo Wararkii",
+    "subtitle": "Macluumaad iyo cusbooneysiin ka yimaada Ethiochinet iyo warshadda logistics",
+    "readMore": "Wax Badan Akhri",
+    "viewAll": "Arag Dhammaan Qoraallada",
+    "categories": {
+      "technology": "Teknoolajiyada Logistics",
+      "updates": "Cusbooneysiinta Bilaabista",
+      "industry": "Warshadda Xamuulka",
+      "economy": "Dhaqaalaha Itoobiya"
+    }
+  },
+  "faq": {
+    "title": "Su'aalaha Badanaa La Weydiiyo",
+    "subtitle": "Hel jawaabaha su'aalaha caadiga ah ee ku saabsan Ethiochinet",
+    "search": "Raadi su'aalaha...",
+    "stillHaveQuestions": "Su'aalo Ma Haysataa?",
+    "contactSupport": "La Xiriir Taageerada",
+    "noResults": "Su'aalo lama helin",
+    "clearFilters": "Shaandheeyada nadiifi"
+  },
+  "footer": {
+    "description": "Isbeddelka logistics Itoobiya iyada oo loo marayo teknoolajiyada, oo xidha milkiilayaasha xamuulka, darawallada, iyo milkiilayaasha baabuurta dalka oo dhan.",
+    "company": "Shirkadda",
+    "resources": "Kheyraadka",
+    "legal": "Sharciyadda",
+    "connect": "Nala Xirir",
+    "stayUpdated": "La Soco Wararka",
+    "subscribe": "Isdiiwaangeli",
+    "emailPlaceholder": "Gali emaylkaaga",
+    "privacy": "Siyaasadda Xogta Gaar",
+    "terms": "Shuruudaha Adeegga",
+    "cookies": "Siyaasadda Cookie",
+    "sitemap": "Khariidadda Goobta",
+    "rights": "Dhammaan xuquuqda waa la ilaalinayaa.",
+    "downloadApps": "Soo degso apps-kayaga"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "login": "Galitaanka Maamulka",
+    "logout": "Ka Bax",
+    "welcome": "Ku soo dhowow dashboard-kaaga maamulka",
+    "blog": "Qoraallada Blog",
+    "jobs": "Fursadaha Shaqada",
+    "investments": "Maalgashiyada",
+    "contacts": "Fariimaha Xiriirka",
+    "partners": "Asxaabta",
+    "testimonials": "Markhaatiyada",
+    "faqs": "FAQs",
+    "statistics": "Tirakoobka",
+    "subscriptions": "Isdiiwaangelinta",
+    "applicants": "Codsadayaasha",
+    "new": "Cusub",
+    "edit": "Wax Ka Beddel",
+    "delete": "Tirtir",
+    "save": "Keydi",
+    "cancel": "Jooji",
+    "status": "Xaaladda",
+    "actions": "Ficillada",
+    "search": "Raadi...",
+    "total": "Wadarta"
+  }
+}

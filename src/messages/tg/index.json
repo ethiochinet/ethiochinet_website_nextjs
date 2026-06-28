@@ -1,0 +1,296 @@
+{
+  "common": {
+    "home": "ቀዳሚ ገጽ",
+    "about": "ብዛዕባና",
+    "blog": "ብሎግ",
+    "careers": "ዕድላት ስራሕ",
+    "investment": "ምዋዕ",
+    "contact": "ርኸቡና",
+    "faq": "ሕቶታት ዝደጋገሙ",
+    "download": "ኣውርዱ",
+    "register": "ምዝገባ",
+    "signIn": "እቶ",
+    "logout": "ወጺኦ",
+    "loading": "ይጽዕን ኣሎ...",
+    "error": "ጌጋ",
+    "success": "ምዕወት",
+    "save": "ዕቀብ",
+    "cancel": "ሰርዝ",
+    "delete": "ሰርዝ",
+    "edit": "ኣርትዕ",
+    "view": "ርኣዮ",
+    "back": "ተመለስ",
+    "search": "ድለ",
+    "filter": "ኣጣርዮ",
+    "all": "ኩሉ",
+    "readMore": "ተወሳኺ ኣንብብ",
+    "learnMore": "ተወሳኺ ተማሃር",
+    "getStarted": "ጀምር",
+    "contactUs": "ርኸቡና",
+    "subscribe": "ኣካፈሊ",
+    "submit": "ኣቕርብ",
+    "send": "ስደድ",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "navigation": {
+    "home": "ቀዳሚ ገጽ",
+    "about": "ብዛዕባና",
+    "blog": "ብሎግ",
+    "careers": "ዕድላት ስራሕ",
+    "investment": "ምዋዕ",
+    "contact": "ርኸቡና",
+    "faq": "ሕቶታት ዝደጋገሙ",
+    "download": "ኣፕ ኣውርዱ"
+  },
+  "hero": {
+    "badge": "ቀዳሚ ናይ ዲጂታል ሎጅስቲክስ መደበር ኢትዮጵያ",
+    "title": "ናይ ኢትዮጵያ ዲጂታል ሎጅስቲክስ መደበር",
+    "title1": "ብልህ ጽዕነት።",
+    "title2": "ዝተሓሓዘ ሎጅስቲክስ።",
+    "subtitle": "ወነንቲ ጽዕነት፣ ሹፌራት፣ ወነንቲ ተሽከርካሪ ምትሕሓዝ",
+    "description": "ኢትዮቺኔት ሎጅስቲክስ ቴክኖሎጂ ሰለስተ ዝተሓሓዙ ኣፕ ይሰርሕ — ንወነንቲ ጽዕነት፣ ሹፌራት፣ ወነንቲ ተሽከርካሪ ኣብ ኢትዮጵያ ዓቕሚ ይህብ።",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "downloadOnThe": "ካብ ኣውርዱ",
+    "getItOn": "ካብ ርኸቦ",
+    "registerOwner": "ወናኒ ጽዕነት",
+    "registerDriver": "ሹፌር",
+    "registerVehicleOwner": "ወናኒ ተሽከርካሪ",
+    "stats": {
+      "drivers": "ዝተመዝገቡ ሹፌራት",
+      "freight": "ዝተወደበ ጽዕነት",
+      "cities": "ዝተቖጸሩ ከተማታት",
+      "downloads": "ናይ ኣፕ ምውራዳት"
+    }
+  },
+  "download": {
+    "pageTitle": "ናይ ኣፕ ፕሮግራምና ኣውርዱ",
+    "pageSubtitle": "ኢትዮቺኔት ሎጅስቲክስ ቴክኖሎጂ ሰለስተ ዝተሓሓዙ ኣፕ ይሰርሕ። ናይ ሚናኻ ዝሰማምዕ ኣፕ ምረጽ።",
+    "keyFeatures": "ዋና ባህሪታት",
+    "downloadOnThe": "ካብ ኣውርዱ",
+    "getItOn": "ካብ ርኸቦ",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "scanToDownload": "ስካን ጌርካ ኣውርድ",
+    "scanSubtitle": "QR ኮድ ብካሜራ ቀጥታ ስካን ጌርካ ኣውርድ",
+    "alreadyHaveApp": "ኣፕ ኣለካ ድዩ?",
+    "jumpIn": "ቀጥታ ናብ ሚናኻ ኣቲ።",
+    "freightOwner": {
+      "name": "Ethiochinet Freight Owner",
+      "subtitle": "ንወነንቲ ጽዕነት",
+      "features": {
+        "f1": "ሓሳባት ጽዕነት ብዲጂታል ምዝጋብ",
+        "f2": "ናይ ትራንስፖርት ዲጂታል ስምምነት ምፍጣር",
+        "f3": "ጅምር ትራንስፖርት ምፍቃድ",
+        "f4": "ጽዕነት ኣብ መንገዲ ምክትታል",
+        "f5": "ምብጻሕ ምርግጋጽ"
+      },
+      "register": "ከም ወናኒ ጽዕነት ተመዝገብ",
+      "label": "ኣፕ ወናኒ ጽዕነት"
+    },
+    "driver": {
+      "name": "Ethiochinet Driver",
+      "subtitle": "ንሹፌራት",
+      "features": {
+        "f1": "ትዕዛዛት ጽዕነት ምቕባል",
+        "f2": "ዲጂታል ወሐለት ምምላእ",
+        "f3": "ዲጂታል ስምምነታት ምፍራም",
+        "f4": "ናብ ቦታ ምብጋስ ጽዕነት ምጽዓን",
+        "f5": "ጽዕነት ምብጻሕ ክፍሊት ምቕባል"
+      },
+      "register": "ከም ሹፌር ተመዝገብ",
+      "label": "ኣፕ ሹፌር"
+    },
+    "vehicleOwner": {
+      "name": "Ethiochinet Vehicle Owner",
+      "subtitle": "ንወነንቲ ተሽከርካሪ",
+      "features": {
+        "f1": "ሓበሬታ ተሽከርካሪ ምምዝጋብ",
+        "f2": "ሹፌራት ምምዳብ",
+        "f3": "ትዕዛዛት ምክትታል",
+        "f4": "ምብጻሓት ብናይ ሰሌዳ ቁጽሪ ምክትታል",
+        "f5": "ሹፌራት ምቆጽጻር"
+      },
+      "register": "ከም ወናኒ ተሽከርካሪ ተመዝገብ",
+      "label": "ኣፕ ወናኒ ተሽከርካሪ"
+    }
+  },
+  "howItWorks": {
+    "title": "ከመይ ይሰርሕ",
+    "subtitle": "ሰለስተ ዝተሓሓዙ ኣፕ፣ ሓደ ናይ ሎጅስቲክስ ሥርዓት",
+    "freightOwner": {
+      "title": "ወናኒ ጽዕነት",
+      "step1Title": "ኣፕ ኣውርድ",
+      "step1Desc": "Ethiochinet Freight Owner ካብ App Store ወይ Google Play ኣውርድ።",
+      "step2Title": "ተመዝገብ",
+      "step2Desc": "ሕሳብ ኣምስርት ሓሳባት ጽዕነትካ ምዝጋብ.",
+      "step3Title": "ስምምነት ኣምስርት",
+      "step3Desc": "ዲጂታል ስምምነት ኣንብብ ምፍቃድ ትራንስፖርት ምፍራም.",
+      "step4Title": "ፍቀድ ከምኡ'ዉን ሓሓላ",
+      "step4Desc": "ጅምር ትራንስፖርት ፍቅዶ ጽዕነትካ ቅጽበት ሰቅካ ሓሓሊ.",
+      "step5Title": "ምብጻሕ ኣረጋጋጽ",
+      "step5Desc": "ጽዕነትካ ተቀበሎ ይጽናሕ ምብጻሕ ምርጋጋጽ."
+    },
+    "driver": {
+      "title": "ሹፌር",
+      "step1Title": "ኣፕ ኣውርድ",
+      "step1Desc": "Ethiochinet Driver ካብ App Store ወይ Google Play ኣውርድ።",
+      "step2Title": "ወሐለት ምላእ",
+      "step2Desc": "ኣብ መድረኽ ክትሳተፍ ዲጂታል ወሐለትካ ምላእ.",
+      "step3Title": "ተቀበሎ ምፍቃድ",
+      "step3Desc": "ትዕዛዛት ጽዕነት ተቀበሎ ዲጂታል ስምምነት ኣምስርት.",
+      "step4Title": "ጸዓን ከምኡ'ዉን ጓዝ",
+      "step4Desc": "ናብ ቦታ ምቕ ምእዳም ሕሰብ ጸዓን ትራንስፖርት ጀምር.",
+      "step5Title": "ኣቅርብ ከምኡ'ዉን ኣርቡሕ",
+      "step5Desc": "ጽዕነት ኣቅርብ ምጽናሕ ምርጋጋጽ ክፍሊት ተቀበሎ."
+    },
+    "vehicleOwner": {
+      "title": "ወናኒ ተሽከርካሪ",
+      "step1Title": "ኣፕ ኣውርድ",
+      "step1Desc": "Ethiochinet Vehicle Owner ካብ App Store ወይ Google Play ኣውርድ።",
+      "step2Title": "ተሽከርካሪ ምምዝጋብ",
+      "step2Desc": "ናይ ሰሌዳ ቁጽሪ ሓቢሩ ሓበሬታ ተሽከርካሪ ምምዝጋብ.",
+      "step3Title": "ሹፌር ምምዳብ",
+      "step3Desc": "ንምምዝጋብ ተሽከርካሪ ብቁዕ ሹፌር ምምዳብ.",
+      "step4Title": "ስርሓት ምክትታል",
+      "step4Desc": "ትዕዛዛት ስምምነታት ምብጻሓ ናይ ተሽከርካሪ ምክትታል.",
+      "step5Title": "ብሰሌዳ ቁጽሪ ምክትታል",
+      "step5Desc": "ናይ ተሽከርካሪ ሓጺር ቁጽሪ ሙሉ ስርሓት ቅጽበት ምክትታል."
+    }
+  },
+  "cta": {
+    "title": "ሎጅስቲክስካ ኣብ ምቅይያር ቁሩብ ዲካ?",
+    "subtitle": "ምስ ወነንቲ ጽዕነት፣ ሹፌራት፣ ወነንቲ ተሽከርካሪ ዝጥቀሙ ካልኦት ሓቢርካ ተቐላቐል",
+    "downloadOnThe": "ካብ ኣውርዱ",
+    "getItOn": "ካብ ርኸቦ",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "freightOwner": "ወናኒ ጽዕነት",
+    "driver": "ሹፌር",
+    "vehicleOwner": "ወናኒ ተሽከርካሪ"
+  },
+  "about": {
+    "title": "ብዛዕባ Ethiochinet",
+    "mission": {
+      "title": "ተልዕሎና",
+      "description": "ናይ ኢትዮጵያ ናይ ሎጅስቲክስ ዘርፊ ዲጂታል መደበር ብምፍጣር ወነንቲ ጽዕነት ምስ ሹፌራት ዝወሃሃዱ ትራንስፖርት ቀልጢፉ ብሩህ ንኹሉ ዝርከብ ምግባር።"
+    },
+    "vision": {
+      "title": "ራእያና",
+      "description": "ናይ ኢትዮጵያ ዝዓበየ ኣኣምን ዲጂታል ሎጅስቲክስ መደበር ምዃን ንዕቤታ ኢኮኖሚ ሀገር ምትኽኻስ።"
+    },
+    "story": {
+      "title": "ታሪኽና",
+      "description": "Ethiochinet ካብ ቅሉዕ ምልካዕ ተወሊዱ፡ ናይ ኢትዮጵያ ዘርፊ ሎጅስቲክስ ዘይተወሃሃደ ዘይፍቱን ምዃኑ። ኣብ 2023 ናይ ምምስራት ጉጅለና ንሱ ምፍቃር ሓቢሩ።"
+    },
+    "values": {
+      "title": "ዋና ዋጋታትና",
+      "trust": "ዕምነትን ምቅሉልነትን",
+      "innovation": "ምፍጠር ቀዳምነት",
+      "customer": "ዓሚል ማእከሉ",
+      "impact": "ናይ ቦታ ሳዕቤን",
+      "efficiency": "ቅልጣፈ",
+      "community": "ሕብረተሰብ"
+    }
+  },
+  "features": {
+    "title": "ዋና ባህሪታት",
+    "subtitle": "ናይ ሎጅስቲክስ ዓሌትካ ቀሊሉ ምክያድ ዘድልዮ ኩሉ ኣሎ",
+    "smartMatching": {
+      "title": "ብልህ ናይ ጽዕነት ምዝማድ",
+      "description": "ናይ AI ኣልጎሪዝም ጽዕነትካ ምስ ዝተኸናኸኑ ሹፌራት ቅጽበት ዝቁናናት።"
+    },
+    "verifiedDrivers": {
+      "title": "ዝተረጋገጹ ሹፌራት",
+      "description": "ኩሎም ሹፌራት ናይ ምርጋጋጽ ኣሰራርሓ ዝሓልፉ።"
+    },
+    "notifications": {
+      "title": "ናይ ቅጽበት ምሕብሃብ",
+      "description": "ናይ ጽዕነት ሁኔታ ቦታ ሹፌር ምርጋጋጽ ምብጻሕ ናይ ቅጽበት ዝርዝር ዝወሃሃዱ።"
+    },
+    "secure": {
+      "title": "ዑቑር መደበር",
+      "description": "ካብ ጫፍ ናብ ጫፍ ዝተኸደኑ ግብይቶን ዑቑር ናይ ክፍሊት ሂደትን።"
+    },
+    "pricing": {
+      "title": "ምቅሉል ዋጋ",
+      "description": "ምቅሉልን ቅድሚ ዝቐረበን ዋጋ ብዘይ ሓባእቲ ክፍሊት።"
+    },
+    "network": {
+      "title": "ናይ ሃገር ዘርዘር",
+      "description": "ኣብ ዋና ዋና ከተማታት ኢትዮጵያ ናይ ዕብዮ ዘርዘር ሹፌራት ምርካብ።"
+    }
+  },
+  "testimonials": {
+    "title": "ዓሙላትና ምን ይብሉ",
+    "subtitle": "ኣብ ምሉእ ኢትዮጵያ ብወነንቲ ጽዕነትን ሹፌራትን ዝተኣመነ"
+  },
+  "partners": {
+    "title": "ሓዋሩናን ደጎፈቲናን",
+    "subtitle": "ናይ ኢትዮጵያ ሎጅስቲክስ ዘርፊ ንምቅይያር ምስ ዋናታት ኢንዳስትሪ ብሓቢር ምስራሕ",
+    "trustedBy": "ብዋናታት ኢንዳስትሪ ዝተኣመነ"
+  },
+  "blog": {
+    "title": "ብሎግ ወይ ዜና",
+    "subtitle": "ካብ Ethiochinet ወይ ሎጅስቲክስ ኢንዳስትሪ ኣፍልጦን ዝርዝርን",
+    "readMore": "ተወሳኺ ኣንብብ",
+    "viewAll": "ኩሎም ጽሑፋት ርኣዮ",
+    "categories": {
+      "technology": "ቴክኖሎጂ ሎጅስቲክስ",
+      "updates": "ዝርዝር ስታርተፕ",
+      "industry": "ናይ ጽዕነት ዘርፊ",
+      "economy": "ዕቤታ ኢኮኖሚ ኢትዮጵያ"
+    }
+  },
+  "faq": {
+    "title": "ሕቶታት ዝደጋገሙ",
+    "subtitle": "ናብ ዝቐርቡ ሕቶታት ብዛዕባ Ethiochinet መልሲ ድለ",
+    "search": "ሕቶታት ድለ...",
+    "stillHaveQuestions": "ሕቶ ኣለካ ድዩ?",
+    "contactSupport": "ምቅርቃር ደጋፊ",
+    "noResults": "ሕቶ ኣይተረኽበን",
+    "clearFilters": "ፊልተር ጽርግ"
+  },
+  "footer": {
+    "description": "ናይ ኢትዮጵያ ሎጅስቲክስ ብቴክኖሎጂ ምቅያር ወነንቲ ጽዕነት ሹፌራት ወነንቲ ተሽከርካሪ ኣብ ሃገር ምትሕሓዝ።",
+    "company": "ኩባንያ",
+    "resources": "ጸጋታት",
+    "legal": "ሕጋዊ",
+    "connect": "ርኸቡና",
+    "stayUpdated": "ዝርዝር ኣኸሳ",
+    "subscribe": "ኣካፈሊ",
+    "emailPlaceholder": "ኢሜይልካ ኣእቱ",
+    "privacy": "ናይ ምሽጥር ፖሊሲ",
+    "terms": "ናይ ኣገልግሎት ውዕሊ",
+    "cookies": "ናይ ኩኪ ፖሊሲ",
+    "sitemap": "ናይ ቦታ ካርታ",
+    "rights": "ኩሎም መሰላት ዝተሓለወ።",
+    "downloadApps": "ኣፕ ኣውርዱ"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "login": "ናይ ኣስተዳደር ምእታው",
+    "logout": "ወጺኦ",
+    "welcome": "ናብ ናይ ኣስተዳደር ዳሽቦርድካ እንቃዕ ደሓን ምጻእካ",
+    "blog": "ናይ ብሎግ ጽሑፋት",
+    "jobs": "ቦታታት ስራሕ",
+    "investments": "ምዋዓት",
+    "contacts": "ናይ ምትእርራም መልዕክቲ",
+    "partners": "ሓዋሩ",
+    "testimonials": "ምስክርነታት",
+    "faqs": "FAQs",
+    "statistics": "ስታቲስቲክስ",
+    "subscriptions": "ኣካፍልቲ",
+    "applicants": "ኣመልከቲ",
+    "new": "ሓዲሽ",
+    "edit": "ኣርትዕ",
+    "delete": "ሰርዝ",
+    "save": "ዕቀብ",
+    "cancel": "ሰርዝ",
+    "status": "ሁኔታ",
+    "actions": "ድርጊታት",
+    "search": "ድለ...",
+    "total": "ጠቕላላ"
+  }
+}

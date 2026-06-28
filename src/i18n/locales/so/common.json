@@ -1,0 +1,63 @@
+{
+  "header": {
+    "home": "Bogga Hore",
+    "aboutUs": "Nagu Saabsan",
+    "guidelines": "Hagaha",
+    "contactUs": "Nala Soo Xidhiidh",
+    "dashboard": "Dashboard",
+    "addChallenge": "Kuuq Dheer",
+    "manageTestimonials": "Maaree Marqaatiyada",
+    "logout": "Ka Bax",
+    "tiktokChallengeHub": "Xarunta Kuuq Dheer ee TikTok"
+  },
+  "hero": {
+    "createParticipateWin": "Abuur, Ka Qayb Gal, oo",
+    "winAmazingPrizes": "Ku Guulee Abaalmarinooyin Cajiib Ah!",
+    "description": "Madasha ugu sareysa ee kuuq dheer TikTok. Haddii aad tahay abuure ama ka qayb gale, muuji kartidaada kuna tartam kuwa ugu fiican!",
+    "getStartedFree": "Bilaash U Bilaab",
+    "createYourChallenge": "Abuur Kuuq Dheer",
+    "browseChallenges": "Baadh Kuuq Dheerrada",
+    "exploreChallenges": "Baadh Kuuq Dheerrada",
+    "postYourVideos": "Dhig Fiidiyowyadaada",
+    "joinCommunities": "Ku Biir Bulshooyinka",
+    "winExcitingPrizes": "Ku Guulee Abaalmarinooyin Xiiso Leh"
+  },
+  "footer": {
+    "quickLinks": "Isku Xirka Degdega ah",
+    "contactInfo": "Macluumaadka Xiriirka",
+    "followUs": "Na Racyo",
+    "termsOfService": "Shuruudaha Adeegga",
+    "privacyPolicy": "Siyaasadda Asturnaanta",
+    "allRightsReserved": "Xuquuqda oo dhan way dhawran yihiin",
+    "madeWith": "Lagu sameeyay",
+    "forCreators": "loo sameeyay abuurayaasha TikTok adduunka oo dhan"
+  },
+  "common": {
+    "selectLanguage": "Dooro Luuqad",
+    "loading": "Soo dejinta...",
+    "error": "Khalad",
+    "retry": "Isku Day Mara Labaad",
+    "save": "Kaydi",
+    "cancel": "Jooji",
+    "delete": "Tirtir",
+    "edit": "Wax Ka Beddel",
+    "view": "Daawo",
+    "submit": "Dhiib",
+    "search": "Raadi",
+    "back": "Dib U Noqo",
+    "next": "Xiga",
+    "previous": "Hore"
+  },
+  "auth": {
+    "signIn": "Soo Gal",
+    "signUp": "Is Diiwaan Geli",
+    "signOut": "Ka Bax",
+    "signInWithGoogle": "Ku Soo Gal Google",
+    "welcomeBack": "Ku Soo Dhawaaw",
+    "selectUserType": "Dooro sida aad u isticmaali doonto madasha",
+    "iAmParticipant": "Waan Ka Qayb Galayaa",
+    "iAmCreator": "Waxaan Ahay Abuure Kuuq Dheer",
+    "participantDesc": "Ku biir kuuq dheerrada oo muuji kartidaada",
+    "creatorDesc": "Abuur kuuq dheer oo maaree ka qayb galayaasha"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "header": {
+    "home": "Mana",
+    "aboutUs": "Waa'ee Keenya",
+    "guidelines": "Qajeelfama",
+    "contactUs": "Nu Qunnamaa",
+    "dashboard": "Daa'ashboordii",
+    "addChallenge": "Qormaata Dabali",
+    "manageTestimonials": "Ragdeessa Bulchi",
+    "logout": "Ba'i",
+    "tiktokChallengeHub": "TikTok Qormaata Bu'uura"
+  },
+  "hero": {
+    "createParticipateWin": "Uumi, Hirmaadhu, fi",
+    "winAmazingPrizes": "Badhaasa Bay'ee Namatti Toltu Qabadhu!",
+    "description": "Daandiiwwan TikTok keessatti hundaa'ee jira. Uummaadhaan ykn hirmaattuu ta'e, dandeettii kee agarsiisi fi warra caalan wajjin dorgomi!",
+    "getStartedFree": "Bilisa Eegali",
+    "createYourChallenge": "Qormaata Keessan Uumaa",
+    "browseChallenges": "Qormaata Ilaali",
+    "exploreChallenges": "Qormaata Ilaali",
+    "postYourVideos": "Viidiyoo Keessan Maxxansaa",
+    "joinCommunities": "Waldaa Keessa Seeni",
+    "winExcitingPrizes": "Badhaasa Gammachiisaa Qabadhu"
+  },
+  "footer": {
+    "quickLinks": "Geessituu Dafoo",
+    "contactInfo": "Odeeffannoo Qunnamtii",
+    "followUs": "Nu Hordofaa",
+    "termsOfService": "Seerota Tajaajilaa",
+    "privacyPolicy": "Seerota Iccitii",
+    "allRightsReserved": "Mirgi hundi eegama",
+    "madeWith": "Kan hojiirra oole",
+    "forCreators": "uumfattoota TikTok addunyaa guutuuf"
+  },
+  "common": {
+    "selectLanguage": "Afaan Filadhu",
+    "loading": "Hojiirra oola...",
+    "error": "Dogoggora",
+    "retry": "Itti Deebi'ii Yaali",
+    "save": "Kusaa",
+    "cancel": "Haqi",
+    "delete": "Balleessi",
+    "edit": "Gulaali",
+    "view": "Ilaali",
+    "submit": "Ergi",
+    "search": "Barbaadi",
+    "back": "Duubi Deebi'i",
+    "next": "Itti Fufi",
+    "previous": "Dursee"
+  },
+  "auth": {
+    "signIn": "Seeni",
+    "signUp": "Galmaa'i",
+    "signOut": "Ba'i",
+    "signInWithGoogle": "Google'n Seeni",
+    "welcomeBack": "Baga Nagaan Deebite",
+    "selectUserType": "Akkamitti fayyadamuu barbaaddu filadhu",
+    "iAmParticipant": "Hirmaattuu",
+    "iAmCreator": "Uumfataa Qormaataa",
+    "participantDesc": "Qormaata hirmaadhuu fi dandeettii koo agarsiisaa",
+    "creatorDesc": "Qormaata uumuu fi hirmaattoota bulchaa"
+  }
+}
