@@ -70,8 +70,8 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      className={`fixed w-full z-50 transition-all duration-300 bg-white ${
+        scrolled ? 'shadow-lg' : ''
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
