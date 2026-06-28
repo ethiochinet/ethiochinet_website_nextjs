@@ -84,10 +84,7 @@ export const metadata: Metadata = {
     apple: '/favicon.png',
   },
   verification: {
-    google: 'YOUR_GOOGLE_SITE_VERIFICATION',
-    other: {
-      'msvalidate.01': 'YOUR_BING_VERIFICATION',
-    },
+    google: 'qSf7CHa58d0JF87DMdXC6JIv6IuVcsKxVpXVFbCSe9w',
   },
   other: {
     'geo.region': 'ET-AA',
