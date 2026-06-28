@@ -1,10 +1,40 @@
-// src/components/home/AboutSection.tsx
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiTruck, HiLocationMarker, HiDocumentText, HiUserGroup } from 'react-icons/hi';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '@/lib/firebase/config';
+
+interface Stats {
+  registeredDrivers: number;
+  freightPosted: number;
+  citiesServed: number;
+}
 
 export default function AboutSection() {
+  const [stats, setStats] = useState<Stats>({ registeredDrivers: 0, freightPosted: 0, citiesServed: 0 });
+
+  useEffect(() => {
+    getDocs(collection(db, 'statistics')).then((snap) => {
+      if (!snap.empty) {
+        const data = snap.docs[0].data() as any;
+        setStats({
+          registeredDrivers: data.registeredDrivers || 0,
+          freightPosted: data.freightPosted || 0,
+          citiesServed: data.citiesServed || 0,
+        });
+      }
+    });
+  }, []);
+
+  const statCards = [
+    { icon: HiTruck, label: '3 Ethiochinet Apps', value: '3 Apps', color: 'bg-teal-500' },
+    { icon: HiLocationMarker, label: 'Cities Served', value: `${stats.citiesServed}+`, color: 'bg-blue-500' },
+    { icon: HiUserGroup, label: 'Registered Drivers', value: `${stats.registeredDrivers}+`, color: 'bg-teal-500' },
+    { icon: HiDocumentText, label: 'Freight Registered', value: `${stats.freightPosted}+`, color: 'bg-blue-500' },
+  ];
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,13 +46,13 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">About Ethiochinet</h2>
-            
+
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-semibold text-teal-600 mb-2">Our Mission</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  To revolutionize Ethiopia's logistics sector by creating a seamless digital platform that 
-                  connects freight owners with reliable drivers, making transportation efficient, transparent, 
+                  To revolutionize Ethiopia's logistics sector by creating a seamless digital platform that
+                  connects freight owners with reliable drivers, making transportation efficient, transparent,
                   and accessible to all.
                 </p>
               </div>
@@ -30,8 +60,8 @@ export default function AboutSection() {
               <div>
                 <h3 className="text-xl font-semibold text-teal-600 mb-2">Our Vision</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  To become Ethiopia's most trusted digital logistics platform, empowering businesses and 
-                  drivers while contributing to the growth of the nation's economy through innovative technology 
+                  To become Ethiopia's most trusted digital logistics platform, empowering businesses and
+                  drivers while contributing to the growth of the nation's economy through innovative technology
                   solutions.
                 </p>
               </div>
@@ -39,8 +69,8 @@ export default function AboutSection() {
               <div>
                 <h3 className="text-xl font-semibold text-teal-600 mb-2">The Challenge</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Ethiopia's logistics industry faces significant challenges: fragmented communication, lack of 
-                  transparency, inefficient freight matching, and limited access to reliable transportation. 
+                  Ethiopia's logistics industry faces significant challenges: fragmented communication, lack of
+                  transparency, inefficient freight matching, and limited access to reliable transportation.
                   These issues cost businesses time and money while limiting opportunities for drivers.
                 </p>
               </div>
@@ -48,8 +78,8 @@ export default function AboutSection() {
               <div>
                 <h3 className="text-xl font-semibold text-teal-600 mb-2">Our Solution</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Ethiochinet bridges the gap between freight owners and drivers through our innovative mobile 
-                  applications. We provide real-time matching, transparent pricing, secure payments, and 
+                  Ethiochinet bridges the gap between freight owners and drivers through our innovative mobile
+                  applications. We provide real-time matching, transparent pricing, secure payments, and
                   end-to-end tracking, making logistics simple and reliable for everyone involved.
                 </p>
               </div>
@@ -63,18 +93,11 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-teal-600 via-teal-700 to-blue-800 flex items-center justify-center"
           >
-            {/* Decorative background circles */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/3 translate-x-1/3" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/3 -translate-x-1/3" />
 
-            {/* Floating stat cards */}
             <div className="relative z-10 grid grid-cols-2 gap-4 p-8 w-full">
-              {[
-                { icon: HiTruck, label: '3 Ethiochinet Apps', value: '3 Apps', color: 'bg-teal-500' },
-                { icon: HiLocationMarker, label: 'Cities Served', value: '15+', color: 'bg-blue-500' },
-                { icon: HiUserGroup, label: 'Registered Drivers', value: '500+', color: 'bg-teal-500' },
-                { icon: HiDocumentText, label: 'Digital Agreements', value: '1000+', color: 'bg-blue-500' },
-              ].map((item, i) => (
+              {statCards.map((item, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -92,7 +115,6 @@ export default function AboutSection() {
               ))}
             </div>
 
-            {/* Bottom label */}
             <div className="absolute bottom-6 left-0 right-0 text-center">
               <span className="text-white/60 text-sm tracking-widest uppercase">
                 Ethiopia's Digital Logistics Platform
