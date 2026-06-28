@@ -100,7 +100,7 @@ export default function Header() {
               )}
             </motion.div>
             
-            <span className="font-bold text-xl text-gray-900 group-hover:text-teal-600 transition-colors">
+            <span className="font-bold text-xl text-black group-hover:text-teal-600 transition-colors">
               Ethiochinet
             </span>
           </Link>
@@ -116,7 +116,7 @@ export default function Header() {
                   className={`relative font-medium transition-colors ${
                     isActive
                       ? 'text-teal-600'
-                      : 'text-gray-900 hover:text-teal-600'
+                      : 'text-black hover:text-teal-600'
                   }`}
                 >
                   {item.name}
@@ -166,7 +166,7 @@ export default function Header() {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors"
+              className="p-2 rounded-lg text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
               {isOpen ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
