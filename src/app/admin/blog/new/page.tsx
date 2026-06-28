@@ -20,11 +20,9 @@ export default function NewBlogPost() {
     status: 'draft',
     featuredImage: '',
     tags: '',
-    author: {
-      name: 'Admin',
-      avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
-      bio: 'Ethiochinet Admin'
-    }
+    authorName: '',
+    authorAvatar: '',
+    authorBio: ''
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,8 +30,14 @@ export default function NewBlogPost() {
     setSaving(true);
 
     try {
+      const { authorName, authorAvatar, authorBio, ...rest } = formData;
       const postData = {
-        ...formData,
+        ...rest,
+        author: {
+          name: authorName || 'Ethiochinet Admin',
+          avatar: authorAvatar || '',
+          bio: authorBio || '',
+        },
         tags: formData.tags.split(',').map(tag => tag.trim()),
         publishedAt: formData.status === 'published' ? Timestamp.now() : null,
         createdAt: Timestamp.now(),
@@ -183,6 +187,51 @@ export default function NewBlogPost() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="technology, logistics, ethiopia"
             />
+          </div>
+
+          <div className="border-t pt-6">
+            <h3 className="text-sm font-semibold text-gray-800 mb-4 uppercase tracking-wide">Author Info</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Author Name *
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={formData.authorName}
+                  onChange={(e) => setFormData({ ...formData, authorName: e.target.value })}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  placeholder="e.g. Mulualem Tesfaye"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Author Avatar URL (optional)
+                </label>
+                <input
+                  type="url"
+                  value={formData.authorAvatar}
+                  onChange={(e) => setFormData({ ...formData, authorAvatar: e.target.value })}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  placeholder="https://example.com/avatar.jpg"
+                />
+              </div>
+
+              <div className="md:col-span-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Author Bio (optional)
+                </label>
+                <input
+                  type="text"
+                  value={formData.authorBio}
+                  onChange={(e) => setFormData({ ...formData, authorBio: e.target.value })}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  placeholder="e.g. Logistics Specialist at Ethiochinet"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </form>
