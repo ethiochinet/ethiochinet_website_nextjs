@@ -100,7 +100,9 @@ export default function Header() {
               )}
             </motion.div>
             
-            <span className="font-bold text-xl text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+            <span className={`font-bold text-xl transition-colors group-hover:text-teal-400 ${
+              scrolled ? 'text-gray-900 dark:text-white' : 'text-white'
+            }`}>
               Ethiochinet
             </span>
           </Link>
@@ -114,9 +116,11 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   className={`relative font-medium transition-colors ${
-                    isActive 
-                      ? 'text-teal-600 dark:text-teal-400' 
-                      : 'text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400'
+                    isActive
+                      ? scrolled ? 'text-teal-600' : 'text-teal-300'
+                      : scrolled
+                        ? 'text-gray-700 hover:text-teal-600'
+                        : 'text-white hover:text-teal-300'
                   }`}
                 >
                   {item.name}
@@ -166,7 +170,9 @@ export default function Header() {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className={`p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors ${
+                scrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/20'
+              }`}
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
               {isOpen ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
