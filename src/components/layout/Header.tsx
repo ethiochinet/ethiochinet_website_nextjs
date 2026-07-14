@@ -137,7 +137,17 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <LanguageSwitcher />
             {/* <ThemeToggle /> */}
-            
+
+            {/* Sign Up */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <a
+                href="https://web.ethiochinet.com/signup-method"
+                className="flex items-center border-2 border-teal-600 text-teal-600 px-4 py-2 rounded-lg hover:bg-teal-600 hover:text-white transition-colors"
+              >
+                <span className="text-sm font-medium">{t('common.signUp') || 'Sign Up'}</span>
+              </a>
+            </motion.div>
+
             {/* App Buttons */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -220,6 +230,17 @@ export default function Header() {
 
                   {/* Divider */}
                   <div className="border-t border-gray-100 dark:border-gray-800 my-4"></div>
+
+                  {/* Sign Up */}
+                  <div className="px-4">
+                    <a
+                      href="https://web.ethiochinet.com/signup-method"
+                      className="flex items-center justify-center border-2 border-teal-600 text-teal-600 px-4 py-3 rounded-lg hover:bg-teal-600 hover:text-white transition-colors w-full font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {t('common.signUp') || 'Sign Up'}
+                    </a>
+                  </div>
 
                   {/* App Download Buttons */}
                   <div className="space-y-3 px-4">
