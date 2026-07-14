@@ -141,7 +141,7 @@ export default function Header() {
             {/* Sign Up */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
-                href="https://web.ethiochinet.com/signup-method"
+                href="https://ethiochinet.com/download"
                 className="flex items-center border-2 border-teal-600 text-teal-600 px-4 py-2 rounded-lg hover:bg-teal-600 hover:text-white transition-colors"
               >
                 <span className="text-sm font-medium">{t('common.signUp') || 'Sign Up'}</span>
@@ -234,7 +234,7 @@ export default function Header() {
                   {/* Sign Up */}
                   <div className="px-4">
                     <a
-                      href="https://web.ethiochinet.com/signup-method"
+                      href="https://ethiochinet.com/download"
                       className="flex items-center justify-center border-2 border-teal-600 text-teal-600 px-4 py-3 rounded-lg hover:bg-teal-600 hover:text-white transition-colors w-full font-medium"
                       onClick={() => setIsOpen(false)}
                     >
