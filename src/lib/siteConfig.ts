@@ -3,8 +3,12 @@ export const siteConfig = {
   company: 'Ethiochinet Logistics Technology',
   url: 'https://ethiochinet.com',
   description:
-    "Ethiopia's leading digital freight logistics platform with three integrated apps — Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner. Post freight, track deliveries in real-time, and manage your fleet seamlessly.",
+    "Ethiochinet is a leading logistics service provider in Ethiopia with three integrated apps — Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner. Post freight, track deliveries in real-time, and manage your fleet seamlessly.",
   keywords: [
+    'logistics service provider in Ethiopia',
+    'logistics service provider Ethiopia',
+    'logistics company in Ethiopia',
+    'logistics services Ethiopia',
     'logistics Ethiopia',
     'freight platform Ethiopia',
     'digital freight matching Ethiopia',

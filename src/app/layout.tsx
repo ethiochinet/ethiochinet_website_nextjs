@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import ClientLayout from './client-layout';
-import "./globals.css";
+// import "./globals.css";
 import { siteConfig } from "@/lib/siteConfig";
 
 const geistSans = Geist({
@@ -19,11 +19,11 @@ const baseUrl = siteConfig.url;
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: `${siteConfig.company} | Ethiopia's Digital Freight Logistics Platform`,
+    default: `${siteConfig.name} | Digital Logistics Service Provider in Ethiopia`,
     template: `%s | Ethiochinet`,
   },
   description:
-    "Ethiopia's leading digital logistics platform with three integrated apps — Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner. Post freight, track deliveries, and manage your fleet in real-time across Ethiopia.",
+    "Ethiochinet is a trusted logistics service provider in Ethiopia with three integrated apps — Freight Owner, Driver, and Vehicle Owner. Post freight, track deliveries, and manage your fleet in real-time across Ethiopia.",
   keywords: siteConfig.keywords as unknown as string[],
   authors: [{ name: siteConfig.company, url: baseUrl }],
   creator: siteConfig.company,
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     alternateLocale: ['am_ET'],
     url: baseUrl,
     siteName: siteConfig.company,
-    title: `${siteConfig.company} | Ethiopia's Digital Freight Logistics`,
+    title: `${siteConfig.name} | Logistics Service Provider in Ethiopia`,
     description:
-      "Three integrated apps connecting freight owners, drivers, and vehicle owners across Ethiopia. AI-powered freight matching, digital agreements, and real-time cargo tracking.",
+      "A leading logistics service provider in Ethiopia — three integrated apps connecting freight owners, drivers, and vehicle owners with AI-powered freight matching, digital agreements, and real-time cargo tracking.",
     images: [
       {
         url: siteConfig.ogImage,
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: siteConfig.twitterHandle,
     creator: siteConfig.twitterHandle,
-    title: `${siteConfig.company} | Ethiopia's Digital Freight Logistics`,
+    title: `${siteConfig.name} | Logistics Service Provider in Ethiopia`,
     description:
-      "Three integrated logistics apps for freight owners, drivers, and vehicle owners — connecting Ethiopia's freight market with technology.",
+      "A leading logistics service provider in Ethiopia — three integrated apps for freight owners, drivers, and vehicle owners.",
     images: [siteConfig.ogImage],
   },
   alternates: {
@@ -109,7 +109,8 @@ const organizationSchema = {
         height: 120,
       },
       description:
-        "Ethiochinet Logistics Technology operates a suite of three integrated applications: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner — digitizing Ethiopia's freight transportation industry.",
+        "Ethiochinet Logistics Technology is a logistics service provider in Ethiopia operating a suite of three integrated applications: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner — digitizing Ethiopia's freight transportation industry.",
+      slogan: 'Your trusted logistics service provider in Ethiopia',
       foundingDate: siteConfig.foundingDate,
       email: siteConfig.email,
       telephone: siteConfig.phone,
@@ -129,6 +130,7 @@ const organizationSchema = {
         name: 'Ethiopia',
       },
       knowsAbout: [
+        'Logistics services in Ethiopia',
         'Freight logistics',
         'Digital freight matching',
         'Cargo tracking',
@@ -158,7 +160,7 @@ const organizationSchema = {
       url: baseUrl,
       name: siteConfig.company,
       description:
-        "Ethiopia's leading digital freight logistics platform with apps for freight owners, drivers, and vehicle owners.",
+        "Ethiochinet — a digital logistics service provider in Ethiopia with apps for freight owners, drivers, and vehicle owners.",
       publisher: { '@id': `${baseUrl}/#organization` },
       potentialAction: {
         '@type': 'SearchAction',
