@@ -138,6 +138,16 @@ export default function Header() {
             <LanguageSwitcher />
             {/* <ThemeToggle /> */}
 
+            {/* Login */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <a
+                href="https://web.ethiochinet.com/"
+                className="flex items-center px-4 py-2 rounded-lg text-teal-600 font-medium hover:bg-teal-50 transition-colors"
+              >
+                <span className="text-sm font-medium">{t('common.signIn') || 'Login'}</span>
+              </a>
+            </motion.div>
+
             {/* Sign Up */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
@@ -231,8 +241,15 @@ export default function Header() {
                   {/* Divider */}
                   <div className="border-t border-gray-100 dark:border-gray-800 my-4"></div>
 
-                  {/* Sign Up */}
-                  <div className="px-4">
+                  {/* Login & Sign Up */}
+                  <div className="px-4 space-y-3">
+                    <a
+                      href="https://web.ethiochinet.com/"
+                      className="flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-teal-600 dark:text-teal-400 px-4 py-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors w-full font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {t('common.signIn') || 'Login'}
+                    </a>
                     <a
                       href="https://web.ethiochinet.com/signup-method"
                       className="flex items-center justify-center border-2 border-teal-600 text-teal-600 px-4 py-3 rounded-lg hover:bg-teal-600 hover:text-white transition-colors w-full font-medium"
