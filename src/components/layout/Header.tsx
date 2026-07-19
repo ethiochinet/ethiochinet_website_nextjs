@@ -25,7 +25,6 @@ export default function Header() {
     { name: t('navigation.about'), href: '/about' },
     { name: t('navigation.blog'), href: '/blog' },
     { name: t('navigation.careers'), href: '/careers' },
-    { name: t('navigation.investment'), href: '/investment' },
     { name: t('navigation.contact'), href: '/contact' },
     { name: t('navigation.faq'), href: '/faq' },
   ];
@@ -135,7 +134,6 @@ export default function Header() {
 
           {/* Desktop Right Section */}
           <div className="hidden lg:flex items-center space-x-4">
-            <LanguageSwitcher />
             {/* <ThemeToggle /> */}
 
             {/* Login */}
@@ -177,6 +175,8 @@ export default function Header() {
                 <span className="text-sm font-medium">{t('common.googlePlay') || 'Google Play'}</span>
               </Link>
             </motion.div>
+
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile menu button */}
