@@ -7,6 +7,7 @@ import { db } from '@/lib/firebase/config';
 import { HiArrowLeft, HiSave } from 'react-icons/hi';
 import Link from 'next/link';
 import { toast } from 'sonner';
+import ImageUploadField from '@/components/admin/ImageUploadField';
 
 export default function EditBlogPost() {
   const router = useRouter();
@@ -165,7 +166,9 @@ export default function EditBlogPost() {
               value={formData.content}
               onChange={(e) => setFormData({ ...formData, content: e.target.value })}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm"
+              placeholder="Markdown supported — e.g. **bold**, _italic_, ## headings, - lists, [links](url)"
             />
+            <p className="text-xs text-gray-500 mt-1">Markdown is supported and rendered on the blog page.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -197,16 +200,12 @@ export default function EditBlogPost() {
             </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Featured Image URL</label>
-            <input
-              type="url"
-              value={formData.featuredImage}
-              onChange={(e) => setFormData({ ...formData, featuredImage: e.target.value })}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-              placeholder="https://example.com/image.jpg"
-            />
-          </div>
+          <ImageUploadField
+            label="Featured Image"
+            value={formData.featuredImage}
+            onChange={(url) => setFormData({ ...formData, featuredImage: url })}
+            folder="user_images"
+          />
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Tags (comma-separated)</label>
@@ -234,16 +233,14 @@ export default function EditBlogPost() {
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Author Avatar URL (optional)</label>
-                <input
-                  type="url"
-                  value={formData.authorAvatar}
-                  onChange={(e) => setFormData({ ...formData, authorAvatar: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-                  placeholder="https://example.com/avatar.jpg"
-                />
-              </div>
+              <ImageUploadField
+                label="Author Avatar"
+                value={formData.authorAvatar}
+                onChange={(url) => setFormData({ ...formData, authorAvatar: url })}
+                folder="user_images"
+                previewShape="circle"
+                required
+              />
 
               <div className="md:col-span-2">
                 <label className="block text-sm font-medium text-gray-700 mb-2">Author Bio (optional)</label>

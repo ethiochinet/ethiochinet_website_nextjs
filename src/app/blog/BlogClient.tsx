@@ -111,8 +111,10 @@ export default function BlogPage() {
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1"
               >
                 <Link href={`/blog/${post.slug}`}>
-                  <div className="relative h-48 w-full">
-                    <Image src={post.featuredImage} alt={post.title} fill className="object-cover" />
+                  <div className="relative h-48 w-full bg-gray-100">
+                    {post.featuredImage && (
+                      <Image src={post.featuredImage} alt={post.title} fill className="object-cover" />
+                    )}
                   </div>
                   <div className="p-6">
                     <div className="flex items-center space-x-2 mb-3">
@@ -122,8 +124,14 @@ export default function BlogPage() {
                     <h2 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">{post.title}</h2>
                     <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                     <div className="flex items-center space-x-3">
-                      <div className="relative w-10 h-10 rounded-full overflow-hidden">
-                        <Image src={post.author.avatar} alt={post.author.name} fill className="object-cover" />
+                      <div className="relative w-10 h-10 rounded-full overflow-hidden bg-teal-100 flex items-center justify-center">
+                        {post.author.avatar ? (
+                          <Image src={post.author.avatar} alt={post.author.name} fill className="object-cover" />
+                        ) : (
+                          <span className="text-teal-700 font-semibold text-sm">
+                            {post.author.name?.charAt(0).toUpperCase()}
+                          </span>
+                        )}
                       </div>
                       <span className="text-sm font-medium text-gray-900">{post.author.name}</span>
                     </div>

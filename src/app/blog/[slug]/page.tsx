@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { format } from 'date-fns';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { getBlogPostBySlug } from '@/lib/firebase/firestore';
 import { HiArrowLeft, HiCalendar, HiUser } from 'react-icons/hi';
 
@@ -119,23 +121,23 @@ export default function BlogPostPage() {
           </header>
 
           {/* Featured Image */}
-          <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden mb-8">
-            <Image
-              src={post.featuredImage}
-              alt={post.title}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          {post.featuredImage && (
+            <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden mb-8 bg-gray-100">
+              <Image
+                src={post.featuredImage}
+                alt={post.title}
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          )}
 
           {/* Content */}
-          <div className="prose prose-lg max-w-none">
-            {post.content.split('\n').map((paragraph, index) => (
-              <p key={index} className="text-gray-700 leading-relaxed mb-4">
-                {paragraph}
-              </p>
-            ))}
+          <div className="prose prose-lg max-w-none prose-teal">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {post.content}
+            </ReactMarkdown>
           </div>
 
           {/* Tags */}
@@ -158,13 +160,19 @@ export default function BlogPostPage() {
           {/* Author Bio */}
           <div className="mt-8 p-6 bg-white rounded-2xl shadow-md">
             <div className="flex items-center space-x-4">
-              <div className="relative w-16 h-16 rounded-full overflow-hidden">
-                <Image
-                  src={post.author.avatar}
-                  alt={post.author.name}
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative w-16 h-16 rounded-full overflow-hidden bg-teal-100 flex items-center justify-center">
+                {post.author.avatar ? (
+                  <Image
+                    src={post.author.avatar}
+                    alt={post.author.name}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <span className="text-teal-700 font-semibold text-lg">
+                    {post.author.name?.charAt(0).toUpperCase()}
+                  </span>
+                )}
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900">{post.author.name}</h4>

@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'firebasestorage.googleapis.com',
       },
+      // Admins can paste arbitrary image URLs for blog featured images and
+      // author avatars, so allow any https host.
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
     ],
   },
   typescript: {
