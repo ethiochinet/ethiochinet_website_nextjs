@@ -8,6 +8,8 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { getJobVacancy, submitJobApplication } from '@/lib/firebase/firestore';
 import { HiArrowLeft, HiLink } from 'react-icons/hi';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface JobVacancy {
   id: string;
@@ -179,7 +181,11 @@ export default function JobApplicationPage() {
 
             <div className="prose max-w-none">
               <h2 className="text-xl font-semibold text-gray-900 mb-3">Description</h2>
-              <p className="text-gray-700 mb-6">{job.description}</p>
+              <div className="prose max-w-none prose-teal text-gray-700 mb-6">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {job.description}
+                </ReactMarkdown>
+              </div>
 
               <h2 className="text-xl font-semibold text-gray-900 mb-3">Requirements</h2>
               <ul className="list-disc pl-5 mb-6 space-y-2">
