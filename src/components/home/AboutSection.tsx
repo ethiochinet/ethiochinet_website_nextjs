@@ -51,7 +51,7 @@ export default function AboutSection() {
               <div>
                 <h3 className="text-xl font-semibold text-teal-600 mb-2">Our Mission</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  To revolutionize Ethiopia's logistics sector by creating a seamless digital platform that
+                  To digitally transform Ethiopia's logistics sector by creating a seamless platform that
                   connects freight owners with reliable drivers, making transportation efficient, transparent,
                   and accessible to all.
                 </p>

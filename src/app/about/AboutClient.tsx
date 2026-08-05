@@ -42,7 +42,7 @@ export default function AboutPage() {
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
               <p className="text-gray-700 leading-relaxed">
-                To revolutionize Ethiopia's logistics sector by creating a seamless digital platform that
+                To digitally transform Ethiopia's logistics sector by creating a seamless platform that
                 connects freight owners with reliable drivers, making transportation efficient, transparent,
                 and accessible to all.
               </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
                 while drivers spent days waiting for loads.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                In 2023, our founding team of logistics experts and technologists came together with a vision
+                Our founding team of logistics experts and technologists came together with a vision
                 to bridge this gap. We built Ethiochinet to digitally connect freight owners with drivers,
                 bringing efficiency and transparency to the industry.
               </p>
