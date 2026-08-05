@@ -111,7 +111,6 @@ const organizationSchema = {
       description:
         "Ethiochinet Logistics Technology is a logistics service provider in Ethiopia operating a suite of three integrated applications: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner — digitizing Ethiopia's freight transportation industry.",
       slogan: 'Your trusted logistics service provider in Ethiopia',
-      foundingDate: siteConfig.foundingDate,
       email: siteConfig.email,
       telephone: siteConfig.phone,
       address: {

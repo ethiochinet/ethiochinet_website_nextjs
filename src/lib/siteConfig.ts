@@ -31,7 +31,6 @@ export const siteConfig = {
   email: 'info@ethiochinet.com',
   phone: '+251903779955',
   phone2: '+251970555577',
-  foundingDate: '2023',
   address: {
     street: 'Bole, Gerji Mebrat Hail, 2nd Floor, Office 107',
     city: 'Addis Ababa',
