@@ -55,7 +55,7 @@ export default function StatsSection() {
         
         <div className="bg-teal-800 p-6 rounded-lg">
           <div className="text-4xl font-bold">{stats.deliveriesCompleted?.toLocaleString()}+</div>
-          <div className="mt-2">Deliveries Completed</div>
+          <div className="mt-2">Deliveries Completed (Quintals)</div>
         </div>
         
         <div className="bg-teal-800 p-6 rounded-lg">
