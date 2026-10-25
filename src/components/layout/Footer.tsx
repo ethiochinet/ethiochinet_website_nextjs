@@ -45,7 +45,7 @@ const footerLinks = {
 const socialLinks = [
   { 
     icon: FaFacebook, 
-    href: 'https://facebook.com/ethiochinets', 
+    href: 'https://facebook.com/ethiochinet', 
     label: 'Facebook',
     color: 'hover:bg-[#1877f2]'
   },
