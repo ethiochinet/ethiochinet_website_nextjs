@@ -15,6 +15,7 @@ import {
   HiStar, 
   HiQuestionMarkCircle,
   HiChartBar,
+  HiVideoCamera,
   HiLogout,
   HiMenu,
   HiX
@@ -29,6 +30,7 @@ const navigation = [
   { name: 'Contact Messages', href: '/admin/contacts', icon: HiMail },
   { name: 'Partners', href: '/admin/partners', icon: HiUserGroup },
   { name: 'Testimonials', href: '/admin/testimonials', icon: HiStar },
+  { name: 'Media Coverage', href: '/admin/media', icon: HiVideoCamera },
   { name: 'FAQs', href: '/admin/faqs', icon: HiQuestionMarkCircle },
   { name: 'Statistics', href: '/admin/statistics', icon: HiChartBar },
   { name: 'Subscriptions', href: '/admin/subscriptions', icon: HiMail },

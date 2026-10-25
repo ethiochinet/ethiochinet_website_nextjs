@@ -7,6 +7,7 @@ import HowItWorks from '@/components/home/HowItWorks';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import StatsSection from '@/components/home/StatsSection';
 import PartnersSection from '@/components/home/PartnersSection';
+import MediaSection from '@/components/home/MediaSection';
 import BlogSection from '@/components/home/BlogSection';
 import FAQSection from '@/components/home/FAQSection';
 import CTASection from '@/components/home/CTASection';
@@ -82,6 +83,7 @@ export default function Home() {
       <HowItWorks />
       <StatsSection />
       <TestimonialsSection />
+      <MediaSection />
       <PartnersSection />
       <BlogSection />
       <FAQSection />

@@ -23,6 +23,7 @@ ${siteConfig.name} is based in ${siteConfig.address.city}, ${siteConfig.address.
 - [About](${base}/about): mission, vision, and story
 - [Download](${base}/download): App Store and Google Play links for each app
 - [FAQ](${base}/faq): how registration, AI freight matching, digital agreements, payments, and tracking work
+- [Media](${base}/media): TV, YouTube, and news coverage of Ethiochinet
 - [Blog](${base}/blog): logistics news and guides
 - [Contact](${base}/contact): get in touch with the team
 
