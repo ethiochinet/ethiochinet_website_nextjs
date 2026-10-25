@@ -19,16 +19,15 @@ const baseUrl = siteConfig.url;
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: `${siteConfig.name} | Digital Logistics Service Provider in Ethiopia`,
+    default: `${siteConfig.name} | AI-Powered Freight Logistics in Ethiopia`,
     template: `%s | Ethiochinet`,
   },
-  description:
-    "Ethiochinet is a trusted logistics service provider in Ethiopia with three integrated apps — Freight Owner, Driver, and Vehicle Owner. Post freight, track deliveries, and manage your fleet in real-time across Ethiopia.",
+  description: siteConfig.description,
   keywords: siteConfig.keywords as unknown as string[],
   authors: [{ name: siteConfig.company, url: baseUrl }],
   creator: siteConfig.company,
   publisher: siteConfig.company,
-  category: 'Logistics Technology',
+  category: 'AI-Enabled Logistics',
   robots: {
     index: true,
     follow: true,
@@ -46,15 +45,15 @@ export const metadata: Metadata = {
     alternateLocale: ['am_ET'],
     url: baseUrl,
     siteName: siteConfig.company,
-    title: `${siteConfig.name} | Logistics Service Provider in Ethiopia`,
+    title: `${siteConfig.name} | AI-Powered Freight Logistics in Ethiopia`,
     description:
-      "A leading logistics service provider in Ethiopia — three integrated apps connecting freight owners, drivers, and vehicle owners with AI-powered freight matching, digital agreements, and real-time cargo tracking.",
+      "An AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey.",
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "Ethiochinet — Ethiopia's Digital Freight Logistics Platform",
+        alt: "Ethiochinet — AI-Powered Freight Logistics",
         type: 'image/png',
       },
     ],
@@ -63,9 +62,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: siteConfig.twitterHandle,
     creator: siteConfig.twitterHandle,
-    title: `${siteConfig.name} | Logistics Service Provider in Ethiopia`,
+    title: `${siteConfig.name} | AI-Powered Freight Logistics in Ethiopia`,
     description:
-      "A leading logistics service provider in Ethiopia — three integrated apps for freight owners, drivers, and vehicle owners.",
+      "AI-native freight logistics: Ethiochinet matches freight owners with the most suitable available trucks and drivers and optimizes the whole journey.",
     images: [siteConfig.ogImage],
   },
   alternates: {
@@ -101,6 +100,7 @@ const organizationSchema = {
       '@type': 'Organization',
       '@id': `${baseUrl}/#organization`,
       name: siteConfig.company,
+      alternateName: siteConfig.alternateNames,
       url: baseUrl,
       logo: {
         '@type': 'ImageObject',
@@ -109,8 +109,8 @@ const organizationSchema = {
         height: 120,
       },
       description:
-        "Ethiochinet Logistics Technology is a logistics service provider in Ethiopia operating a suite of three integrated applications: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner — digitizing Ethiopia's freight transportation industry.",
-      slogan: 'Your trusted logistics service provider in Ethiopia',
+        "Ethiochinet Logistics is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey. It operates three integrated applications: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner.",
+      slogan: siteConfig.tagline,
       email: siteConfig.email,
       telephone: siteConfig.phone,
       address: {
@@ -129,6 +129,12 @@ const organizationSchema = {
         name: 'Ethiopia',
       },
       knowsAbout: [
+        'AI-powered freight logistics',
+        'AI-enabled logistics services',
+        'Cargo transportation',
+        'AI freight matching',
+        'Truck and driver matching',
+        'Transportation journey optimization',
         'Logistics services in Ethiopia',
         'Freight logistics',
         'Digital freight matching',
@@ -158,8 +164,9 @@ const organizationSchema = {
       '@id': `${baseUrl}/#website`,
       url: baseUrl,
       name: siteConfig.company,
+      alternateName: siteConfig.alternateNames,
       description:
-        "Ethiochinet — a digital logistics service provider in Ethiopia with apps for freight owners, drivers, and vehicle owners.",
+        "Ethiochinet — AI-powered freight logistics in Ethiopia, with apps for freight owners, drivers, and vehicle owners.",
       publisher: { '@id': `${baseUrl}/#organization` },
       potentialAction: {
         '@type': 'SearchAction',

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'About Ethiochinet | Our Story, Mission & Vision',
   description:
     'Ethiochinet is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey.',
-  keywords: ['about Ethiochinet', 'Ethiopia logistics company', 'digital freight startup Ethiopia', 'logistics technology Addis Ababa'],
+  keywords: ['about Ethiochinet', 'Ethiochinet Logistics', 'chinet logistics', 'AI enabled logistics service provider', 'Ethiopia logistics company', 'digital freight startup Ethiopia', 'logistics technology Addis Ababa'],
   alternates: { canonical: url },
   openGraph: {
     url,
@@ -24,9 +24,9 @@ const aboutSchema = {
   '@type': 'AboutPage',
   '@id': `${url}/#webpage`,
   url,
-  name: 'About Ethiochinet Logistics Technology',
+  name: 'About Ethiochinet Logistics',
   description:
-    'Ethiochinet Logistics Technology is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey. The company operates three integrated apps: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner.',
+    'Ethiochinet Logistics is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey. The company operates three integrated apps: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner.',
   isPartOf: { '@id': `${siteConfig.url}/#website` },
   about: { '@id': `${siteConfig.url}/#organization` },
   breadcrumb: {

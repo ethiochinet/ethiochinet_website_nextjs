@@ -33,15 +33,15 @@ const faqSchema = {
       '@id': `${url}/#faqpage`,
       url,
       name: 'Ethiochinet Frequently Asked Questions',
-      description: 'Common questions about Ethiochinet Logistics Technology and its three integrated apps.',
+      description: 'Common questions about Ethiochinet Logistics and its three integrated apps.',
       isPartOf: { '@id': `${siteConfig.url}/#website` },
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is Ethiochinet Logistics Technology?',
+          name: 'What is Ethiochinet Logistics?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ethiochinet Logistics Technology is Ethiopia\'s digital freight logistics platform operating a suite of three integrated applications: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner. These apps connect freight owners, drivers, and vehicle owners/operators to streamline the entire freight transportation process — from registering loads and signing digital agreements to real-time tracking and payment.',
+            text: 'Ethiochinet Logistics is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey. It operates a suite of three integrated applications: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner. These apps connect freight owners, drivers, and vehicle owners/operators to streamline the entire freight transportation process — from registering loads and signing digital agreements to real-time tracking and payment.',
           },
         },
         {

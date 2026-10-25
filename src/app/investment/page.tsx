@@ -5,9 +5,9 @@ import InvestmentClient from './InvestmentClient';
 const url = `${siteConfig.url}/investment`;
 
 export const metadata: Metadata = {
-  title: 'Investment Opportunities | Ethiochinet Logistics Technology',
+  title: 'Investment Opportunities | Ethiochinet Logistics',
   description:
-    'Invest in Ethiochinet Logistics Technology — Ethiopia\'s fastest-growing digital freight platform. 6,400+ users, 4,000+ monthly freight transports, 15+ cities. $500M+ market opportunity. Seed and Series A investment open.',
+    'Invest in Ethiochinet Logistics — Ethiopia\'s fastest-growing digital freight platform. 6,400+ users, 4,000+ monthly freight transports, 15+ cities. $500M+ market opportunity. Seed and Series A investment open.',
   keywords: [
     'invest in Ethiochinet',
     'Ethiopia logistics startup investment',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   alternates: { canonical: url },
   openGraph: {
     url,
-    title: 'Investment Opportunities | Ethiochinet Logistics Technology',
+    title: 'Investment Opportunities | Ethiochinet Logistics',
     description:
       'A $500M+ market, 6,400+ users, and 15+ cities served. Invest in Ethiopia\'s leading digital freight platform.',
     images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
@@ -32,9 +32,9 @@ const investmentSchema = {
       '@type': 'WebPage',
       '@id': `${url}/#webpage`,
       url,
-      name: 'Investment Opportunities — Ethiochinet Logistics Technology',
+      name: 'Investment Opportunities — Ethiochinet Logistics',
       description:
-        'Ethiochinet Logistics Technology is seeking investment to expand its digital freight platform across Ethiopia and beyond. The company has 6,400+ active users and covers 15+ cities.',
+        'Ethiochinet Logistics is seeking investment to expand its digital freight platform across Ethiopia and beyond. The company has 6,400+ active users and covers 15+ cities.',
       isPartOf: { '@id': `${siteConfig.url}/#website` },
       about: { '@id': `${siteConfig.url}/#organization` },
     },

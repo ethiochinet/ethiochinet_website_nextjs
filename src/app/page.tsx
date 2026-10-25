@@ -14,15 +14,15 @@ import CTASection from '@/components/home/CTASection';
 const base = siteConfig.url;
 
 export const metadata: Metadata = {
-  title: `${siteConfig.company} | Ethiopia's Digital Freight Logistics Platform`,
+  title: `${siteConfig.company} | AI-Powered Freight Logistics in Ethiopia`,
   description:
-    "Ethiochinet connects freight owners with verified drivers and vehicle operators across Ethiopia. Post freight, sign digital agreements, track cargo in real-time, and manage your fleet — all from three integrated mobile apps.",
+    "Ethiochinet is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey. Post freight, sign digital agreements, track cargo in real-time, and manage your fleet from three integrated apps.",
   alternates: { canonical: base },
   openGraph: {
     url: base,
-    title: `${siteConfig.company} | Ethiopia's Digital Freight Logistics Platform`,
+    title: `${siteConfig.company} | AI-Powered Freight Logistics in Ethiopia`,
     description:
-      "Three integrated apps — Ethiochinet Freight Owner, Driver, and Vehicle Owner — powering Ethiopia's digital logistics ecosystem.",
+      "AI-native freight logistics for Ethiopia — Ethiochinet Freight Owner, Driver, and Vehicle Owner apps match freight with the most suitable available trucks and drivers.",
     images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
   },
 };
@@ -32,9 +32,9 @@ const homePageSchema = {
   '@type': 'WebPage',
   '@id': `${base}/#webpage`,
   url: base,
-  name: `${siteConfig.company} | Ethiopia's Digital Freight Logistics Platform`,
+  name: `${siteConfig.company} | AI-Powered Freight Logistics in Ethiopia`,
   description:
-    "Ethiochinet Logistics Technology operates three integrated apps connecting freight owners, drivers, and vehicle owners across Ethiopia.",
+    "Ethiochinet Logistics is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey, delivered through three integrated apps for freight owners, drivers, and vehicle owners.",
   isPartOf: { '@id': `${base}/#website` },
   about: { '@id': `${base}/#organization` },
   mainEntity: {

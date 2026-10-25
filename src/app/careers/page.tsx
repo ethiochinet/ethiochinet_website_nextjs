@@ -7,7 +7,7 @@ const url = `${siteConfig.url}/careers`;
 export const metadata: Metadata = {
   title: 'Careers at Ethiochinet | Join Our Team in Ethiopia',
   description:
-    'Join Ethiochinet Logistics Technology and help build Ethiopia\'s future of freight. Explore open positions in technology, operations, business development, and more. Located in Addis Ababa.',
+    'Join Ethiochinet Logistics and help build Ethiopia\'s future of freight. Explore open positions in technology, operations, business development, and more. Located in Addis Ababa.',
   keywords: [
     'Ethiochinet careers',
     'logistics jobs Ethiopia',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url,
     title: 'Careers at Ethiochinet | Join Our Team',
     description:
-      'Help transform Ethiopia\'s logistics industry. Explore open positions at Ethiochinet Logistics Technology.',
+      'Help transform Ethiopia\'s logistics industry. Explore open positions at Ethiochinet Logistics.',
     images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
   },
 };
@@ -32,7 +32,7 @@ const careersSchema = {
       '@type': 'WebPage',
       '@id': `${url}/#webpage`,
       url,
-      name: 'Careers at Ethiochinet Logistics Technology',
+      name: 'Careers at Ethiochinet Logistics',
       description: 'Open job positions at Ethiochinet — Ethiopia\'s leading digital freight logistics platform.',
       isPartOf: { '@id': `${siteConfig.url}/#website` },
     },

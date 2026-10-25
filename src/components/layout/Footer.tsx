@@ -281,7 +281,7 @@ export default function Footer() {
           {/* Company Info - Takes 2 columns on large screens */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <span className="font-bold text-xl">Ethiochinet Logistics Technology</span>
+              <span className="font-bold text-xl">Ethiochinet Logistics</span>
             </div>
             
             <p className="text-gray-400 mb-6 max-w-md">
@@ -398,7 +398,7 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             {/* Copyright */}
             <div className="text-sm text-gray-500 text-center lg:text-left">
-              © {currentYear} Ethiochinet Logistics Technology. All rights reserved.
+              © {currentYear} Ethiochinet Logistics. All rights reserved.
             </div>
 
             {/* App Download Buttons */}

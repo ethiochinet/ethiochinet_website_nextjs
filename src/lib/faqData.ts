@@ -9,9 +9,9 @@ export interface FAQ {
 export const staticFaqs: FAQ[] = [
   {
     id: 'static-1',
-    question: 'What is Ethiochinet Logistics Technology?',
+    question: 'What is Ethiochinet Logistics?',
     answer:
-      'Ethiochinet Logistics Technology is Ethiopia\'s digital freight logistics platform operating a suite of three integrated applications: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner. These apps connect freight owners, drivers, and vehicle owners/operators to streamline the entire freight transportation process — from registering loads and signing digital agreements to real-time tracking and payment.',
+      'Ethiochinet Logistics is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey. It operates a suite of three integrated applications: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner. These apps connect freight owners, drivers, and vehicle owners/operators to streamline the entire freight transportation process — from registering loads and signing digital agreements to real-time tracking and payment.',
     category: 'General',
     order: 1,
   },

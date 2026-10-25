@@ -5,9 +5,9 @@ import ContactClient from './ContactClient';
 const url = `${siteConfig.url}/contact`;
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Ethiochinet Logistics Technology',
+  title: 'Contact Us | Ethiochinet Logistics',
   description:
-    'Contact Ethiochinet Logistics Technology. Reach us at info@ethiochinet.com or call +251 903 77 99 55 / +251 970 55 55 77. Office located in Bole, Gerji Mebrat Hail, Addis Ababa, Ethiopia.',
+    'Contact Ethiochinet Logistics. Reach us at info@ethiochinet.com or call +251 903 77 99 55 / +251 970 55 55 77. Office located in Bole, Gerji Mebrat Hail, Addis Ababa, Ethiopia.',
   keywords: [
     'contact Ethiochinet',
     'Ethiochinet support',
@@ -31,7 +31,7 @@ const contactSchema = {
       '@type': 'ContactPage',
       '@id': `${url}/#webpage`,
       url,
-      name: 'Contact Ethiochinet Logistics Technology',
+      name: 'Contact Ethiochinet Logistics',
       isPartOf: { '@id': `${siteConfig.url}/#website` },
       about: { '@id': `${siteConfig.url}/#organization` },
     },

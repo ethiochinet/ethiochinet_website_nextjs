@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-700">
-                Ethiochinet Logistics Technology ("we," "our," or "us") is committed to protecting your privacy. 
+                Ethiochinet Logistics ("we," "our," or "us") is committed to protecting your privacy. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when 
                 you use our website and mobile applications.
               </p>
