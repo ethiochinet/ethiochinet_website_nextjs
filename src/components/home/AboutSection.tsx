@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { HiTruck, HiLocationMarker, HiDocumentText, HiUserGroup } from 'react-icons/hi';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '@/lib/firebase/config';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface Stats {
   registeredDrivers: number;
@@ -13,6 +14,7 @@ interface Stats {
 }
 
 export default function AboutSection() {
+  const { t } = useTranslation();
   const [stats, setStats] = useState<Stats>({ registeredDrivers: 0, freightPosted: 0, citiesServed: 0 });
 
   useEffect(() => {
@@ -51,8 +53,7 @@ export default function AboutSection() {
               <div>
                 <h3 className="text-xl font-semibold text-teal-600 mb-2">Our Mission</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  To power Ethiopia's freight logistics with AI, intelligently connecting freight owners with the
-                  most suitable available trucks and drivers while optimizing the entire transportation journey.
+                  {t('about.mission.description')}
                 </p>
               </div>
 
@@ -116,7 +117,7 @@ export default function AboutSection() {
 
             <div className="absolute bottom-6 left-0 right-0 text-center">
               <span className="text-white/60 text-sm tracking-widest uppercase">
-                AI-Powered Freight Logistics
+                {t('about.tagline')}
               </span>
             </div>
           </motion.div>

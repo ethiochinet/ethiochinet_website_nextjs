@@ -45,12 +45,12 @@
     "download": "Download Apps"
   },
   "hero": {
-    "badge": "Ethiopia's Leading Digital Logistics Platform",
+    "badge": "Ethiopia's AI-Powered Freight Logistics Platform",
     "title": "Ethiopia's Digital Logistics Platform",
-    "title1": "Smarter Freight.",
-    "title2": "Connected Logistics.",
+    "title1": "AI-Powered Freight.",
+    "title2": "Smarter Logistics.",
     "subtitle": "Connecting Freight Owners, Drivers and Vehicle Owners",
-    "description": "Ethiochinet Logistics operates a suite of three integrated apps — empowering freight owners, drivers, and vehicle owners across Ethiopia.",
+    "description": "Ethiochinet Logistics is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers, through three integrated apps for freight owners, drivers, and vehicle owners across Ethiopia.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOnThe": "Download on the",
@@ -185,7 +185,8 @@
     },
     "story": {
       "title": "Our Story",
-      "description": "Ethiochinet was born from a simple observation: Ethiopia's logistics sector was fragmented, inefficient, and lacked transparency. Our founding team came together to bridge this gap."
+      "description": "Ethiochinet was born from a simple observation: Ethiopia's logistics sector was fragmented, inefficient, and lacked transparency. Our founding team came together to bridge this gap.",
+      "founding": "Our founding team of logistics experts and technologists came together with a vision to bridge this gap. We built Ethiochinet as an AI-native platform that matches freight owners with the right trucks and drivers, bringing efficiency and transparency to the industry."
     },
     "values": {
       "title": "Our Core Values",
