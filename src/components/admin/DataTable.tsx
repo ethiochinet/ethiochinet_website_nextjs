@@ -95,27 +95,26 @@ export default function DataTable({
                   ))}
                   {(onEdit || onDelete || actions) && (
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      {actions ? (
-                        actions(item)
-                      ) : (
-                        <>
-                          {onEdit && (
-                            <button
-                              onClick={() => onEdit(item)}
-                              className="text-teal-600 hover:text-teal-900 mr-4 inline-flex items-center"
-                            >
-                              <HiPencil className="w-4 h-4" />
-                            </button>
-                          )}
-                          {onDelete && (
-                            <button
-                              onClick={() => onDelete(item)}
-                              className="text-red-600 hover:text-red-900 inline-flex items-center"
-                            >
-                              <HiTrash className="w-4 h-4" />
-                            </button>
-                          )}
-                        </>
+                      {actions && (
+                        <span className={`inline-flex items-center ${onEdit || onDelete ? 'mr-4' : ''}`}>
+                          {actions(item)}
+                        </span>
+                      )}
+                      {onEdit && (
+                        <button
+                          onClick={() => onEdit(item)}
+                          className="text-teal-600 hover:text-teal-900 mr-4 inline-flex items-center"
+                        >
+                          <HiPencil className="w-4 h-4" />
+                        </button>
+                      )}
+                      {onDelete && (
+                        <button
+                          onClick={() => onDelete(item)}
+                          className="text-red-600 hover:text-red-900 inline-flex items-center"
+                        >
+                          <HiTrash className="w-4 h-4" />
+                        </button>
                       )}
                     </td>
                   )}
