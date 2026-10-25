@@ -42,7 +42,7 @@ const stats: StatItem[] = [
   { 
     icon: HiLocationMarker, 
     iconOutlined: HiOutlineLocationMarker,
-    label: 'Deliveries Completed', 
+    label: 'Deliveries Completed(Kuintal)', 
     value: 4900, 
     suffix: '+',
     color: 'from-purple-500 to-pink-500'
