@@ -7,14 +7,14 @@ const url = `${siteConfig.url}/about`;
 export const metadata: Metadata = {
   title: 'About Ethiochinet | Our Story, Mission & Vision',
   description:
-    'Learn about Ethiochinet Logistics Technology — founded to bridge Ethiopia\'s logistics gap with AI-powered freight matching, digital agreements, and real-time tracking across 15+ cities.',
+    'Ethiochinet is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey.',
   keywords: ['about Ethiochinet', 'Ethiopia logistics company', 'digital freight startup Ethiopia', 'logistics technology Addis Ababa'],
   alternates: { canonical: url },
   openGraph: {
     url,
     title: 'About Ethiochinet | Our Story, Mission & Vision',
     description:
-      'Founded to bridge Ethiopia\'s logistics gap, Ethiochinet connects freight owners, drivers, and vehicle owners across Ethiopia through three integrated mobile apps.',
+      'AI-powered freight logistics: Ethiochinet intelligently matches freight owners with the most suitable available trucks and drivers and optimizes the entire transportation journey.',
     images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
   },
 };
@@ -26,7 +26,7 @@ const aboutSchema = {
   url,
   name: 'About Ethiochinet Logistics Technology',
   description:
-    'Ethiochinet Logistics Technology was founded to digitize freight transportation in Ethiopia. The company operates three integrated apps: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner.',
+    'Ethiochinet Logistics Technology is an AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey. The company operates three integrated apps: Ethiochinet Freight Owner, Ethiochinet Driver, and Ethiochinet Vehicle Owner.',
   isPartOf: { '@id': `${siteConfig.url}/#website` },
   about: { '@id': `${siteConfig.url}/#organization` },
   breadcrumb: {

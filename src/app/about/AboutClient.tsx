@@ -19,8 +19,11 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About <span className="text-teal-600">Ethiochinet</span>
             </h1>
+            <p className="text-sm font-semibold uppercase tracking-widest text-teal-600 mb-4">
+              AI-Powered Freight Logistics
+            </p>
             <p className="text-xl text-gray-600">
-              Transforming Ethiopia's logistics landscape through innovative technology
+              An AI-native freight logistics platform that intelligently connects freight owners with the most suitable available trucks and drivers while optimizing the entire transportation journey.
             </p>
           </motion.div>
         </div>
@@ -42,9 +45,8 @@ export default function AboutPage() {
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
               <p className="text-gray-700 leading-relaxed">
-                To digitally transform Ethiopia's logistics sector by creating a seamless platform that
-                connects freight owners with reliable drivers, making transportation efficient, transparent,
-                and accessible to all.
+                To power Ethiopia's freight logistics with AI, intelligently connecting freight owners with the
+                most suitable available trucks and drivers while optimizing the entire transportation journey.
               </p>
             </motion.div>
 
@@ -87,8 +89,8 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 Our founding team of logistics experts and technologists came together with a vision
-                to bridge this gap. We built Ethiochinet to digitally connect freight owners with drivers,
-                bringing efficiency and transparency to the industry.
+                to bridge this gap. We built Ethiochinet as an AI-native platform that matches freight owners with the right
+                trucks and drivers, bringing efficiency and transparency to the industry.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Today, we serve thousands of users across 15+ Ethiopian cities, and we're just getting started.
