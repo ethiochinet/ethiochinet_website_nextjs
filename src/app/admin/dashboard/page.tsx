@@ -54,7 +54,6 @@ export default function AdminDashboard() {
   });
   const [loading, setLoading] = useState(true);
   const [recentActivities, setRecentActivities] = useState<any[]>([]);
-  const [debugInfo, setDebugInfo] = useState<any[]>([]);
   const [authStatus, setAuthStatus] = useState<string>('Checking authentication...');
 
   useEffect(() => {
@@ -73,8 +72,6 @@ export default function AdminDashboard() {
   }, []);
 
   const fetchDashboardData = async () => {
-    setDebugInfo([]);
-    
     try {
       const collections = [
         { name: 'blogPosts', label: 'Blog Posts' },
@@ -88,26 +85,22 @@ export default function AdminDashboard() {
       ];
 
       const results: number[] = [];
+      const failed: string[] = [];
       
       for (const col of collections) {
         try {
           console.log(`Fetching ${col.name}...`);
           const snapshot = await getDocs(collection(db, col.name));
           results.push(snapshot.size);
-          setDebugInfo(prev => [...prev, { 
-            collection: col.label, 
-            status: 'success', 
-            count: snapshot.size 
-          }]);
         } catch (error: any) {
           console.error(`Error fetching ${col.name}:`, error);
           results.push(0);
-          setDebugInfo(prev => [...prev, { 
-            collection: col.label, 
-            status: 'error', 
-            error: error.message 
-          }]);
+          failed.push(col.label);
         }
+      }
+
+      if (failed.length > 0) {
+        toast.error(`Could not load: ${failed.join(', ')}`);
       }
 
       setStats({
@@ -136,11 +129,6 @@ export default function AdminDashboard() {
         setRecentActivities(recentContacts);
       } catch (error: any) {
         console.error('Error fetching contacts:', error);
-        setDebugInfo(prev => [...prev, { 
-          collection: 'Recent Contacts', 
-          status: 'error', 
-          error: error.message 
-        }]);
       }
 
     } catch (error: any) {
@@ -176,26 +164,6 @@ export default function AdminDashboard() {
           <HiRefresh className="w-5 h-5 mr-2" />
           Refresh
         </button>
-      </div>
-
-      {/* Debug Panel */}
-      <div className="mb-8 bg-gray-50 border border-gray-200 rounded-lg p-4">
-        <h3 className="font-semibold text-gray-900 mb-3">Collection Access Status</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          {debugInfo.map((info, index) => (
-            <div 
-              key={index} 
-              className={`p-2 rounded text-sm ${
-                info.status === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-              }`}
-            >
-              <span className="font-medium">{info.collection}:</span>{' '}
-              {info.status === 'success' 
-                ? `✅ ${info.count} items` 
-                : `❌ ${info.error}`}
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Stats Grid */}
