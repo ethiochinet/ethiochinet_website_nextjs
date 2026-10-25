@@ -15,6 +15,7 @@ interface Partner {
   category: string;
   order: number;
   featured: boolean;
+  isActive?: boolean;
 }
 
 const containerVariants = {
@@ -63,8 +64,9 @@ export default function PartnersSection() {
         id: doc.id,
         ...doc.data()
       })) as Partner[];
-      
-      setPartners(partnersData);
+
+      // Filtered here rather than in the query so partners saved before isActive existed still show.
+      setPartners(partnersData.filter((partner) => partner.isActive !== false));
     } catch (error) {
       console.error('Error fetching partners:', error);
     } finally {
@@ -137,9 +139,13 @@ export default function PartnersSection() {
                     className="block"
                   >
                     <PartnerLogo partner={partner} />
+                    <PartnerName name={partner.name} />
                   </a>
                 ) : (
-                  <PartnerLogo partner={partner} />
+                  <>
+                    <PartnerLogo partner={partner} />
+                    <PartnerName name={partner.name} />
+                  </>
                 )}
                 
                 {/* Category badge */}
@@ -185,17 +191,25 @@ export default function PartnersSection() {
   );
 }
 
+function PartnerName({ name }: { name: string }) {
+  return (
+    <p className="mt-4 text-center text-sm font-semibold text-gray-800 group-hover:text-teal-600 transition-colors line-clamp-2">
+      {name}
+    </p>
+  );
+}
+
 function PartnerLogo({ partner }: { partner: Partner }) {
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
 
-  if (imageError) {
+  // The name is shown under the card, so the fallback shows initials instead.
+  if (imageError || !partner.logo) {
+    const initials = partner.name.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
     return (
       <div className="relative h-20 w-full flex items-center justify-center">
-        <div className="w-full h-full bg-gray-100 rounded-lg flex items-center justify-center">
-          <span className="text-gray-400 text-sm text-center px-2">
-            {partner.name}
-          </span>
+        <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center">
+          <span className="text-teal-600 text-xl font-bold">{initials}</span>
         </div>
       </div>
     );

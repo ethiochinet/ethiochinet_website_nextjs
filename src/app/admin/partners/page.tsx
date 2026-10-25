@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { collection, getDocs, deleteDoc, doc, updateDoc, Timestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase/config';
 import Link from 'next/link';
-import { HiPlus, HiEye } from 'react-icons/hi';
+import { HiPlus, HiEye, HiEyeOff } from 'react-icons/hi';
 import { toast } from 'sonner';
 import Image from 'next/image';
 import DataTable from '@/components/admin/DataTable';
@@ -46,6 +46,19 @@ export default function AdminPartnersPage() {
     }
   };
 
+  // Partners saved before the status field existed have no isActive and count as active.
+  const handleToggleActive = async (partner: any) => {
+    const isActive = partner.isActive !== false;
+    try {
+      await updateDoc(doc(db, 'partners', partner.id), { isActive: !isActive, updatedAt: Timestamp.now() });
+      toast.success(`${partner.name} is now ${isActive ? 'inactive' : 'active'}`);
+      fetchPartners();
+    } catch (error) {
+      console.error('Error updating partner status:', error);
+      toast.error('Failed to update partner status');
+    }
+  };
+
   const columns = [
     { 
       key: 'logo', 
@@ -79,6 +92,17 @@ export default function AdminPartnersPage() {
           value ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'
         }`}>
           {value ? 'Yes' : 'No'}
+        </span>
+      )
+    },
+    {
+      key: 'isActive',
+      label: 'Status',
+      render: (value: boolean) => (
+        <span className={`px-2 py-1 rounded-full text-xs ${
+          value !== false ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-600'
+        }`}>
+          {value !== false ? 'Active' : 'Inactive'}
         </span>
       )
     },
@@ -126,6 +150,15 @@ export default function AdminPartnersPage() {
         data={partners}
         onEdit={(partner) => window.location.href = `/admin/partners/edit/${partner.id}`}
         onDelete={handleDelete}
+        actions={(partner) => (
+          <button
+            onClick={() => handleToggleActive(partner)}
+            className="text-gray-500 hover:text-teal-600"
+            title={partner.isActive !== false ? 'Make inactive' : 'Make active'}
+          >
+            {partner.isActive !== false ? <HiEyeOff className="w-5 h-5" /> : <HiEye className="w-5 h-5" />}
+          </button>
+        )}
         searchPlaceholder="Search partners by name or category..."
       />
     </div>
